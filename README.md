@@ -1,6 +1,6 @@
 # film_snob
 
-Helps parse URLs of web videos. Plans to support a few cool video providers.
+Helps parse URLs of web videos.
 
 ## Installation
 
@@ -21,10 +21,19 @@ Or install it yourself as:
 ```ruby
 snob = FilmSnob.new("https://www.youtube.com/watch?v=GwT3zH16w3s")
 snob.watchable? #=> true
-snob.provider   #=> :youtube
+snob.site       #=> :youtube
 snob.id         #=> 'GwT3zH16w3s'
-snob.embedcode  #=> ... whatever (depend on oembed?)
 ```
+
+## Supported video providers
+
+* YouTube
+* Vimeo
+* Hulu
+
+## Testing
+
+Run `rake` to run all of the rspecs.
 
 ## Contributing
 
