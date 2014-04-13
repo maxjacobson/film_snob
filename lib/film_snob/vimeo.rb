@@ -15,5 +15,9 @@ class FilmSnob
       @clean_url ||= "https://vimeo.com/#{id}"
     end
 
+    def self.oembed_endpoint
+      'http://vimeo.com/api/oembed.json'
+    end
+
   end
 end

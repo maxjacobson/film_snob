@@ -8,6 +8,10 @@ class FilmSnob
       ]
     end
 
+    def self.oembed_endpoint
+      'https://www.youtube.com/oembed'
+    end
+
     def clean_url
       @clean_url ||= "https://www.youtube.com/watch?v=#{id}"
     end

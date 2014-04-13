@@ -1,4 +1,4 @@
-require 'film_snob'
+require_relative 'spec_helper'
 
 describe FilmSnob do
 
@@ -24,6 +24,9 @@ describe FilmSnob do
       expect(snob).to be_watchable
       expect(snob.id).to eq "7q5Ltr0qc8c"
       expect(snob.site).to eq :youtube
+      VCR.use_cassette('billy') do
+        expect(snob.title).to eq 'Billy on the Street: Amateur Speed Sketching!'
+      end
     end
 
     it 'should parse YouTube URLs with dashes' do
@@ -62,6 +65,9 @@ describe FilmSnob do
       snob = FilmSnob.new("https://vimeo.com/16010689")
       expect(snob.id).to eq "16010689"
       expect(snob.site).to eq :vimeo
+      VCR.use_cassette('stephen') do
+        expect(snob.title).to eq 'Days Like Today'
+      end
     end
 
     it 'should parse http vimeo URLs' do
@@ -97,6 +103,10 @@ describe FilmSnob do
       snob = FilmSnob.new("http://www.hulu.com/watch/285095")
       expect(snob.id).to eq '285095'
       expect(snob.site).to eq :hulu
+      VCR.use_cassette('harmon') do
+        expect(snob.title).to eq 'Remedial Chaos Theory (Community)'
+        expect{snob.html}.not_to raise_error
+      end
     end
   end
 
