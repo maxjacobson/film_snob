@@ -25,7 +25,9 @@ Or install it yourself as:
 snob = FilmSnob.new("https://www.youtube.com/watch?v=GwT3zH16w3s")
 snob.watchable? #=> true
 snob.site       #=> :youtube
-snob.id         #=> 'GwT3zH16w3s'
+snob.id         #=> "GwT3zH16w3s"
+snob.title      #=> "What Are You, The Coolest? With Robert Rodriguez"
+snob.html       #=> "<iframe width=\"480\" height=\"270\" src=\"http://www.youtube.com/embed/GwT3zH16w3s?feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>"
 ```
 
 ## Supported video providers
@@ -33,6 +35,8 @@ snob.id         #=> 'GwT3zH16w3s'
 * YouTube
 * Vimeo
 * Hulu
+
+The same methods work with all of these providers.
 
 ## Testing
 
