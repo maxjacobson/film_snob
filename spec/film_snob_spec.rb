@@ -26,6 +26,21 @@ describe FilmSnob do
       expect(snob.site).to eq :youtube
     end
 
+    it 'should parse YouTube URLs with dashes' do
+      snob = FilmSnob.new("https://www.youtube.com/watch?v=xa-KBqOFgDQ")
+      expect(snob).to be_watchable
+      expect(snob.id).to eq "xa-KBqOFgDQ"
+      expect(snob.site).to eq :youtube
+    end
+
+    it 'should parse YouTube URLs with underscores' do
+      # first video I could find with an underscore
+      snob = FilmSnob.new("https://www.youtube.com/watch?v=HPR3PB_VGVs")
+      expect(snob).to be_watchable
+      expect(snob.id).to eq "HPR3PB_VGVs"
+      expect(snob.site).to eq :youtube
+    end
+
     it 'should parse mobile YouTube URLs' do
       snob = FilmSnob.new("https://m.youtube.com/watch?v=6dyeFalOjw0&feature=youtu.be")
       expect(snob.id).to eq "6dyeFalOjw0"

@@ -3,8 +3,8 @@ class FilmSnob
 
     def self.valid_url_patterns
       [
-        %r{https?://(?:(?:www|m).)?youtube.com/watch\?v=([\w\d]+)},
-        %r{https?://(?:(?:www|m).)?youtu.be/([\w\d]+)}
+        %r{https?://(?:(?:www|m).)?youtube.com/watch\?v=([\w\d\-_]+)},
+        %r{https?://(?:(?:www|m).)?youtu.be/([\w\d\-_]+)}
       ]
     end
 
