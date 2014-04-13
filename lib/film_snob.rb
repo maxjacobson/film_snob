@@ -10,23 +10,17 @@ class FilmSnob
     @video = FilmSnob::UrlToVideo.new(url).video
   end
 
-  def site
-    complain_about_bad_urls!(:site)
-    video.site
-  end
-
-  def id
-    complain_about_bad_urls!(:id)
-    video.id
-  end
-
-  def clean_url
-    complain_about_bad_urls!(:clean_url)
-    video.clean_url
-  end
-
   def watchable?
     !video.nil?
+  end
+
+  def method_missing(m)
+    if [:site, :id, :clean_url, :title, :html].include?(m)
+      complain_about_bad_urls!(m)
+      video.send(m)
+    else
+      super
+    end
   end
 
   private

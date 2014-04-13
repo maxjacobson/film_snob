@@ -7,6 +7,10 @@ class FilmSnob
       ]
     end
 
+    def self.oembed_endpoint
+      'http://www.hulu.com/api/oembed.json'
+    end
+
     def clean_url
       @clean_url ||= "http://www.hulu.com/watch/#{id}"
     end

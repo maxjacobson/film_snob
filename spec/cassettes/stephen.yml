@@ -1,0 +1,63 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://vimeo.com/api/oembed.json?url=https://vimeo.com/16010689
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Expires:
+      - Sun, 13 Apr 2014 22:40:15 GMT
+      Last-Modified:
+      - Sun, 13 Apr 2014 19:06:59 GMT
+      Etag:
+      - '"3ee9abac968dd90ff3d61a6c3ed1e6aac5a93a7d"'
+      X-Ua-Compatible:
+      - IE=edge
+      X-Dns-Prefetch-Control:
+      - 'on'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Sun, 13 Apr 2014 22:39:15 GMT
+      X-Varnish:
+      - '2109561577'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
+      X-Varnish-Cache:
+      - '0'
+      Nncoection:
+      - close
+      X-Vserver:
+      - 10.90.128.188
+    body:
+      encoding: UTF-8
+      string: '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Days
+        Like Today","author_name":"Stephen_Scott_Day","author_url":"http:\/\/vimeo.com\/stephenscottday","is_plus":"1","html":"<iframe
+        src=\"\/\/player.vimeo.com\/video\/16010689\" width=\"1280\" height=\"720\"
+        frameborder=\"0\" title=\"Days Like Today\" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen><\/iframe>","width":1280,"height":720,"duration":463,"description":"more
+        info @ www.followthroughfilms.com\n\nI don''t expect many people to watch
+        the whole thing, but if you do, lemme know. \n\nTuesday, October 19th, 2010.
+        Somewhere between 3:40pm and 3:50pm. Alhambra, CA.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/97388869_1280.jpg","thumbnail_width":1280,"thumbnail_height":720,"video_id":16010689}'
+    http_version: 
+  recorded_at: Sun, 13 Apr 2014 22:39:15 GMT
+recorded_with: VCR 2.9.0

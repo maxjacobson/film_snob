@@ -1,0 +1,43 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.hulu.com/api/oembed.json?url=http://www.hulu.com/watch/285095
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '821'
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=EmulateIE9; IE=EmulateIE7
+      Accept-Ranges:
+      - bytes
+      Cache-Control:
+      - max-age=3568
+      Date:
+      - Sun, 13 Apr 2014 22:40:14 GMT
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: '{"cache_age":3600,"type":"video","large_thumbnail_url":"http://ib.huluim.com/video/50172061?size=512x288&caller=h1o&img=i","height":296,"html":"<iframe
+        width=\"512\" height=\"296\" src=\"http://www.hulu.com/embed.html?eid=CbtnRM8PBJsCfZpUy2V3Yg\"
+        frameborder=\"0\" scrolling=\"no\" webkitAllowFullScreen mozallowfullscreen
+        allowfullscreen> </iframe>","large_thumbnail_width":512,"embed_url":"http://www.hulu.com/embed.html?eid=CbtnRM8PBJsCfZpUy2V3Yg","air_date":"Thu
+        Oct 13 00:00:00 UTC 2011","large_thumbnail_height":288,"thumbnail_url":"http://ib.huluim.com/video/50172061?size=145x80&caller=h1o&img=i","author_name":"NBC","provider_name":"Hulu","title":"Remedial
+        Chaos Theory (Community)","thumbnail_width":145,"provider_url":"http://www.hulu.com/","duration":1286.87,"version":"1.0","thumbnail_height":80,"width":512}'
+    http_version: 
+  recorded_at: Sun, 13 Apr 2014 22:40:14 GMT
+recorded_with: VCR 2.9.0

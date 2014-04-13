@@ -1,3 +1,5 @@
+require 'httparty'
+
 class FilmSnob
   class VideoSite
 
@@ -19,12 +21,35 @@ class FilmSnob
       []
     end
 
+    def self.oembed_endpoint
+      ''
+    end
+
+    def title
+      oembed['title']
+    end
+
+    def html
+      if oembed['html']
+        oembed['html']
+      else
+        raise NotEmbeddableError.new("#{clean_url} is not embeddable")
+      end
+    end
+
     private
 
       def matching_pattern
         self.class.valid_url_patterns.find do |pattern|
           pattern.match(url)
         end
+      end
+
+      def oembed
+        @oembed ||= HTTParty.get(
+          self.class.oembed_endpoint,
+          query: { url: clean_url }
+        )
       end
 
   end
