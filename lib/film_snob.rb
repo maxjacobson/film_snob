@@ -32,7 +32,7 @@ class FilmSnob
   private
 
     def complain_about_bad_urls!(method)
-      raise NotSupportURLError.new("Can not call FilmSnob##{method} because #{url} is not a supported URL.") unless watchable?
+      raise NotSupportedURLError.new("Can not call FilmSnob##{method} because #{url} is not a supported URL.") unless watchable?
     end
 
 end

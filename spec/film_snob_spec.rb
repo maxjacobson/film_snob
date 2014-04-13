@@ -12,7 +12,7 @@ describe FilmSnob do
     it 'should raise an exception if you push your luck' do
       snob = FilmSnob.new("http://hardscrabble.net")
       expect(snob).to_not be_watchable
-      expect{snob.id}.to raise_error(FilmSnob::NotSupportURLError)
+      expect{snob.id}.to raise_error(FilmSnob::NotSupportedURLError)
     end
 
   end

@@ -1,3 +1,3 @@
 class FilmSnob
-  class NotSupportURLError < StandardError; end
+  class NotSupportedURLError < StandardError; end
 end
