@@ -8,7 +8,7 @@ class FilmSnob
     end
 
     def clean_url
-      "http://www.hulu.com/watch/#{id}"
+      @clean_url ||= "http://www.hulu.com/watch/#{id}"
     end
 
   end

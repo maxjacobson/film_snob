@@ -81,10 +81,12 @@ describe FilmSnob do
       snob = FilmSnob.new("https://vimeo.com/couchmode/staffpicks/sort:date/91157088")
       expect(snob.id).to eq "91157088"
       expect(snob.site).to eq :vimeo
+      expect(snob.clean_url).to eq 'https://vimeo.com/91157088'
 
       snob2 = FilmSnob.new("https://vimeo.com/couchmode/watchlater/sort:date/51020067")
       expect(snob2.id).to eq "51020067"
       expect(snob2.site).to eq :vimeo
+      expect(snob2.clean_url).to eq 'https://vimeo.com/51020067'
     end
 
 

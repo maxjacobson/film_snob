@@ -12,7 +12,7 @@ class FilmSnob
     end
 
     def clean_url
-      "https://vimeo.com/#{id}"
+      @clean_url ||= "https://vimeo.com/#{id}"
     end
 
   end

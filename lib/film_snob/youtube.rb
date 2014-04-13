@@ -9,7 +9,7 @@ class FilmSnob
     end
 
     def clean_url
-      "https://www.youtube.com/watch?v=#{id}"
+      @clean_url ||= "https://www.youtube.com/watch?v=#{id}"
     end
 
   end
