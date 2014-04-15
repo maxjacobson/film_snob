@@ -22,13 +22,23 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-snob = FilmSnob.new("https://www.youtube.com/watch?v=GwT3zH16w3s")
-snob.watchable? #=> true
-snob.site       #=> :youtube
-snob.id         #=> "GwT3zH16w3s"
-snob.title      #=> "What Are You, The Coolest? With Robert Rodriguez"
-snob.html       #=> "<iframe width=\"480\" height=\"270\" src=\"http://www.youtube.com/embed/GwT3zH16w3s?feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>"
+film = FilmSnob.new("https://www.youtube.com/watch?v=GwT3zH16w3s")
+film.watchable? #=> true
+film.site       #=> :youtube
+film.id         #=> "GwT3zH16w3s"
+film.title      #=> "What Are You, The Coolest? With Robert Rodriguez"
+film.html       #=> "<iframe width=\"480\" height=\"270\" src=\"http://www.youtube.com/embed/GwT3zH16w3s?feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>"
 ```
+
+Can also pass some configuration options like this:
+
+```ruby
+film = FilmSnob.new("http://vimeo.com/64683454", width: 720)
+filmtitle #=> "Garann Means - Bacon is bad for you"
+film.html #=> "<iframe src=\"//player.vimeo.com/video/64683454\" width=\"720\" height=\"405\" frameborder=\"0\" title=\"Garann Means - Bacon is bad for you\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+```
+
+film_snob uses the oembed protocol to get html for embed codes. These options assume some knowledge of the endpoint's API. The above vimeo example works because they [have an extensively documented API](http://developer.vimeo.com/apis/oembed) which allows tons of configuration. The other two don't seem to have any documentation or configuration at all.
 
 ## Supported video providers
 
