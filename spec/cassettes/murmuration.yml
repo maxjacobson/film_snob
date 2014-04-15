@@ -1,0 +1,61 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://vimeo.com/api/oembed.json?url=https://vimeo.com/31158841&width=400
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Age:
+      - '1'
+      Date:
+      - Tue, 15 Apr 2014 02:52:16 GMT
+      Expires:
+      - Tue, 15 Apr 2014 02:53:16 GMT
+      Content-Length:
+      - '793'
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - ! '"e19e6eea37661a8e029d8f8e3b2116f3e97ea8f0"'
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Last-Modified:
+      - Tue, 15 Apr 2014 02:10:30 GMT
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      X-Varnish:
+      - '1677378251'
+      X-Varnish-Cache:
+      - '0'
+      Nncoection:
+      - close
+      X-Vserver:
+      - 10.90.128.197
+    body:
+      encoding: US-ASCII
+      string: ! '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Murmuration","author_name":"Islands
+        & Rivers","author_url":"http:\/\/vimeo.com\/islandsandrivers","is_plus":"1","html":"<iframe
+        src=\"\/\/player.vimeo.com\/video\/31158841\" width=\"400\" height=\"300\"
+        frameborder=\"0\" title=\"Murmuration\" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen><\/iframe>","width":400,"height":300,"duration":123,"description":"www.islandsandrivers.com\n\nFacebook:
+        Islands And Rivers\n\nFollow us @Islands_Rivers\n\nA chance encounter and
+        shared moment with one of natures greatest and most fleeting phenomena.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/448600816_295x166.jpg","thumbnail_width":295,"thumbnail_height":221,"video_id":31158841}'
+    http_version: 
+  recorded_at: Tue, 15 Apr 2014 02:52:17 GMT
+recorded_with: VCR 2.9.0

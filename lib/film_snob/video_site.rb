@@ -3,10 +3,11 @@ require 'httparty'
 class FilmSnob
   class VideoSite
 
-    attr_reader :url
+    attr_reader :url, :options
 
-    def initialize(url)
+    def initialize(url, options)
       @url = url
+      @options = options
     end
 
     def id
@@ -48,7 +49,7 @@ class FilmSnob
       def oembed
         @oembed ||= HTTParty.get(
           self.class.oembed_endpoint,
-          query: { url: clean_url }
+          query: { url: clean_url }.merge(options)
         )
       end
 
