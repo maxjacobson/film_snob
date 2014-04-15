@@ -34,8 +34,8 @@ Can also pass some configuration options like this:
 
 ```ruby
 film = FilmSnob.new("http://vimeo.com/64683454", width: 720)
-filmtitle #=> "Garann Means - Bacon is bad for you"
-film.html #=> "<iframe src=\"//player.vimeo.com/video/64683454\" width=\"720\" height=\"405\" frameborder=\"0\" title=\"Garann Means - Bacon is bad for you\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
+film.title #=> "Garann Means - Bacon is bad for you"
+film.html  #=> "<iframe src=\"//player.vimeo.com/video/64683454\" width=\"720\" height=\"405\" frameborder=\"0\" title=\"Garann Means - Bacon is bad for you\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 ```
 
 film_snob uses the oembed protocol to get html for embed codes. These options assume some knowledge of the endpoint's API. The above vimeo example works because they [have an extensively documented API](http://developer.vimeo.com/apis/oembed) which allows tons of configuration. The other two don't seem to have any documentation or configuration at all.
