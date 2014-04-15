@@ -13,38 +13,36 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sun, 13 Apr 2014 22:37:31 GMT
+      - Tue, 15 Apr 2014 02:52:15 GMT
       Server:
       - gwiseguy/2.0
+      X-Frame-Options:
+      - ALLOWALL
+      X-Xss-Protection:
+      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
+      Expires:
+      - Tue, 27 Apr 1971 19:44:06 EST
       X-Content-Type-Options:
       - nosniff
       P3p:
       - CP="This is not a P3P policy! See http://support.google.com/accounts/bin/answer.py?answer=151657&hl=en
         for more info."
-      X-Xss-Protection:
-      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
       Content-Type:
       - application/json
-      X-Frame-Options:
-      - ALLOWALL
-      Expires:
-      - Tue, 27 Apr 1971 19:44:06 EST
       Cache-Control:
       - no-cache
-      Alternate-Protocol:
-      - 443:quic
       Transfer-Encoding:
       - chunked
     body:
-      encoding: UTF-8
-      string: '{"title": "Billy on the Street: Amateur Speed Sketching!", "author_name":
-        "billyonthestreettv", "height": 270, "width": 480, "thumbnail_width": 480,
-        "author_url": "http:\/\/www.youtube.com\/user\/billyonthestreettv", "thumbnail_height":
-        360, "type": "video", "thumbnail_url": "http:\/\/i1.ytimg.com\/vi\/7q5Ltr0qc8c\/hqdefault.jpg",
-        "provider_url": "http:\/\/www.youtube.com\/", "html": "\u003ciframe width=\"480\"
-        height=\"270\" src=\"http:\/\/www.youtube.com\/embed\/7q5Ltr0qc8c?feature=oembed\"
-        frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e", "version": "1.0",
-        "provider_name": "YouTube"}'
+      encoding: US-ASCII
+      string: ! '{"type": "video", "provider_url": "http:\/\/www.youtube.com\/", "thumbnail_url":
+        "http:\/\/i1.ytimg.com\/vi\/7q5Ltr0qc8c\/hqdefault.jpg", "thumbnail_height":
+        360, "width": 480, "provider_name": "YouTube", "author_url": "http:\/\/www.youtube.com\/user\/billyonthestreettv",
+        "title": "Billy on the Street: Amateur Speed Sketching!", "thumbnail_width":
+        480, "version": "1.0", "html": "\u003ciframe width=\"480\" height=\"270\"
+        src=\"http:\/\/www.youtube.com\/embed\/7q5Ltr0qc8c?feature=oembed\" frameborder=\"0\"
+        allowfullscreen\u003e\u003c\/iframe\u003e", "height": 270, "author_name":
+        "billyonthestreettv"}'
     http_version: 
-  recorded_at: Sun, 13 Apr 2014 22:37:31 GMT
+  recorded_at: Tue, 15 Apr 2014 02:52:17 GMT
 recorded_with: VCR 2.9.0

@@ -11,14 +11,15 @@ class FilmSnob
       Hulu
     ]
 
-    attr_reader :url
+    attr_reader :url, :options
 
-    def initialize(url)
+    def initialize(url, options)
       @url = url
+      @options = options
     end
 
     def video
-      site.nil?? nil : site.new(url)
+      site.nil?? nil : site.new(url, options)
     end
 
     private
