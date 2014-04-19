@@ -1,6 +1,7 @@
 require "film_snob/vimeo"
 require "film_snob/youtube"
 require "film_snob/hulu"
+require "film_snob/funny_or_die"
 
 class FilmSnob
   class UrlToVideo
@@ -8,7 +9,8 @@ class FilmSnob
     VIDEO_SITES = [
       Vimeo,
       YouTube,
-      Hulu
+      Hulu,
+      FunnyOrDie
     ]
 
     attr_reader :url, :options
