@@ -6,7 +6,7 @@ describe FilmSnob do
 
     it 'should handle non-supported URLs gracefully' do
       snob = FilmSnob.new("http://hardscrabble.net")
-      expect(snob.video).to be_nil
+      expect(snob).to_not be_watchable
     end
 
     it 'should raise an exception if you push your luck' do
