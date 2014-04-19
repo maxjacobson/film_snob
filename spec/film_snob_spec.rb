@@ -94,7 +94,7 @@ describe FilmSnob do
       expect(snob2.site).to eq :vimeo
       expect(snob2.clean_url).to eq 'https://vimeo.com/51020067'
     end
-    
+
     it 'should allow oembed configuration' do
       snob = FilmSnob.new("http://vimeo.com/31158841", width: 400)
       VCR.use_cassette "murmuration" do
@@ -116,6 +116,18 @@ describe FilmSnob do
       VCR.use_cassette('harmon') do
         expect(snob.title).to eq 'Remedial Chaos Theory (Community)'
         expect{snob.html}.not_to raise_error
+      end
+    end
+  end
+
+  describe 'funny or die URLs' do
+    it 'should parse funny or die URLs' do
+      film = FilmSnob.new("http://www.funnyordie.com/videos/8db066d2e0/the-live-read-of-space-jam-with-blake-griffin")
+      expect(film.id).to eq '8db066d2e0'
+      expect(film.site).to eq :funnyordie
+      VCR.use_cassette 'space jam' do
+        expect(film.title).to eq 'The Live Read of Space Jam with Blake Griffin'
+        expect{film.html}.not_to raise_error
       end
     end
   end
