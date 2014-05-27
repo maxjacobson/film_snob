@@ -31,11 +31,7 @@ class FilmSnob
     end
 
     def html
-      if oembed['html']
-        oembed['html']
-      else
-        raise NotEmbeddableError.new("#{clean_url} is not embeddable")
-      end
+      oembed['html'] || (raise NotEmbeddableError.new("#{clean_url} is not embeddable"))
     end
 
     private
