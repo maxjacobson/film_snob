@@ -47,6 +47,7 @@ film_snob uses the oembed protocol to get html for embed codes. These options as
 * Hulu
 * Funny or Die
 * Coub
+* Instagram
 
 The same methods work with all of these providers.
 

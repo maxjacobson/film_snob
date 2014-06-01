@@ -172,6 +172,18 @@ describe FilmSnob do
     end
   end
 
+  describe 'instagram URLs' do
+    it 'should parse instagram URLs' do
+      film = FilmSnob.new("http://instagram.com/p/oBkLq7hnDP/")
+      expect(film.id).to eq 'oBkLq7hnDP'
+      expect(film.site).to eq :instagram
+      VCR.use_cassette 'sphynx cat' do
+        expect(film.title).to eq "Very stupid package!"
+        expect{film.html}.not_to raise_error
+      end
+    end
+  end
+
   describe 'coub URLs' do
     it 'should parse coub URLs' do
       film = FilmSnob.new('http://coub.com/view/rcd14cm')
