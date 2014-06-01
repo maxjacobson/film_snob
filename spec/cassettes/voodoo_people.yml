@@ -1,0 +1,57 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://coub.com/api/oembed.json?url=http://coub.com/view/rcd14cm
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers: {}
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - ! '*'
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Expires:
+      - Tue, 15 Apr 2014 02:53:16 GMT
+      Last-Modified:
+      - Sun, 13 Apr 2014 19:06:59 GMT
+      Etag:
+      - ! '"3ee9abac968dd90ff3d61a6c3ed1e6aac5a93a7d"'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Date:
+      - Tue, 15 Apr 2014 02:52:16 GMT
+      X-Varnish:
+      - '273732503'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
+      X-Varnish-Cache:
+      - '0'
+      Cneonction:
+      - close
+      X-Vserver:
+      - 10.90.128.147
+    body:
+      encoding: US-ASCII
+      string: |
+        {"type":"video","version":"1.0","width":942,"height":720,"title":"voodoo people","url":"http://coub.com/view/rcd14cm",
+        "thumbnail_url":"http://cdn1.akamai.coub.com/coub/simple/cw_image/8007107badd/a0f3e90c986074ac81f30/med_1374583486_00033.jpg",
+        "thumbnail_width":640,"thumbnail_height":488,"author_name":"Igor","author_url":"http://coub.com/coubcreator",
+        "provider_name":"Coub","provider_url":"http://coub.com/",
+        "html":"<iframesrc=\"http://coub.com/embed/rcd14cm\"allowfullscreen=\"true\"frameborder=\"0\"width=\"640\"height=\"489\"></iframe>"}
+    http_version: 
+  recorded_at: Sun, 01 Jun 2014 02:52:17 GMT
+recorded_with: VCR 2.9.0
