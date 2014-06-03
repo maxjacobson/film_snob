@@ -1,8 +1,8 @@
-require 'httparty'
+require 'net/http'
+require 'json'
 
 class FilmSnob
   class VideoSite
-
     attr_reader :url, :options
 
     def initialize(url, options)
@@ -31,11 +31,10 @@ class FilmSnob
     end
 
     def html
-      oembed['html'] || (raise NotEmbeddableError.new("#{clean_url} is not embeddable"))
+      oembed['html'] || (raise NotEmbeddableError, "#{clean_url} is not embeddable")
     end
 
     private
-
       def matching_pattern
         self.class.valid_url_patterns.find do |pattern|
           pattern.match(url)
@@ -43,11 +42,13 @@ class FilmSnob
       end
 
       def oembed
-        @oembed ||= HTTParty.get(
-          self.class.oembed_endpoint,
-          query: { url: clean_url }.merge(options)
-        )
-      end
+        uri = URI(self.class.oembed_endpoint)
+        params = { url: clean_url }.merge(options)
+        uri.query = URI.encode_www_form(params)
 
+        @oembed ||= JSON.parse(Net::HTTP.get(uri))
+      rescue JSON::ParserError
+        raise InvalidJSONError.new("request to #{clean_url} return invalid JSON")
+      end
   end
 end
