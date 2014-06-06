@@ -28,7 +28,7 @@ class FilmSnob
       if watchable?
         @video
       else
-        raise NotSupportedURLError.new("#{url} is not a supported URL")
+        raise NotSupportedURLError, "#{url} is not a supported URL"
       end
     end
 

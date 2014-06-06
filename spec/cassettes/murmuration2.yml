@@ -6,7 +6,11 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
   response:
     status:
       code: 200
@@ -19,11 +23,11 @@ http_interactions:
       Access-Control-Allow-Headers:
       - X-Requested-With
       Expires:
-      - Tue, 15 Apr 2014 02:52:58 GMT
+      - Fri, 06 Jun 2014 03:05:51 GMT
       Last-Modified:
-      - Tue, 15 Apr 2014 02:10:30 GMT
+      - Fri, 06 Jun 2014 02:09:21 GMT
       Etag:
-      - ! '"e19e6eea37661a8e029d8f8e3b2116f3e97ea8f0"'
+      - ! '"5ffeebb02a34c4b0edaf908978ae3dc7a08a8994"'
       Vary:
       - Accept-Encoding
       Content-Type:
@@ -31,19 +35,19 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Tue, 15 Apr 2014 02:52:16 GMT
+      - Fri, 06 Jun 2014 03:04:51 GMT
       X-Varnish:
-      - 2146795868 2146790599
+      - '1671233141'
       Age:
-      - '18'
+      - '0'
       Via:
       - 1.1 varnish
       X-Varnish-Cache:
-      - '1'
+      - '0'
       Nncoection:
       - close
       X-Vserver:
-      - 10.90.128.188
+      - dfvimeowebproxy3
     body:
       encoding: US-ASCII
       string: ! '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Murmuration","author_name":"Islands
@@ -54,5 +58,5 @@ http_interactions:
         Islands And Rivers\n\nFollow us @Islands_Rivers\n\nA chance encounter and
         shared moment with one of natures greatest and most fleeting phenomena.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/448600816_295x166.jpg","thumbnail_width":295,"thumbnail_height":221,"video_id":31158841}'
     http_version: 
-  recorded_at: Tue, 15 Apr 2014 02:52:17 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Fri, 06 Jun 2014 03:04:51 GMT
+recorded_with: VCR 2.9.2
