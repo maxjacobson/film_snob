@@ -6,7 +6,15 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - www.hulu.com
   response:
     status:
       code: 200
@@ -22,22 +30,20 @@ http_interactions:
       - 200 OK
       X-Ua-Compatible:
       - IE=EmulateIE9; IE=EmulateIE7
-      Accept-Ranges:
-      - bytes
       Cache-Control:
-      - max-age=3600
+      - max-age=1205
       Date:
-      - Tue, 15 Apr 2014 02:52:16 GMT
+      - Fri, 06 Jun 2014 02:59:56 GMT
       Connection:
       - keep-alive
     body:
-      encoding: US-ASCII
-      string: ! '{"cache_age":3600,"type":"video","large_thumbnail_url":"http://ib.huluim.com/video/50172061?size=512x288&caller=h1o&img=i","height":296,"html":"<iframe
+      encoding: UTF-8
+      string: '{"thumbnail_height":80,"thumbnail_url":"http://ib.huluim.com/video/50172061?size=145x80&caller=h1o&img=i","type":"video","cache_age":3600,"title":"Remedial
+        Chaos Theory (Community)","width":512,"large_thumbnail_url":"http://ib.huluim.com/video/50172061?size=512x288&caller=h1o&img=i","large_thumbnail_width":512,"height":296,"embed_url":"http://www.hulu.com/embed.html?eid=CbtnRM8PBJsCfZpUy2V3Yg","html":"<iframe
         width=\"512\" height=\"296\" src=\"http://www.hulu.com/embed.html?eid=CbtnRM8PBJsCfZpUy2V3Yg\"
         frameborder=\"0\" scrolling=\"no\" webkitAllowFullScreen mozallowfullscreen
-        allowfullscreen> </iframe>","large_thumbnail_width":512,"embed_url":"http://www.hulu.com/embed.html?eid=CbtnRM8PBJsCfZpUy2V3Yg","air_date":"Thu
-        Oct 13 00:00:00 UTC 2011","large_thumbnail_height":288,"thumbnail_url":"http://ib.huluim.com/video/50172061?size=145x80&caller=h1o&img=i","author_name":"NBC","provider_name":"Hulu","title":"Remedial
-        Chaos Theory (Community)","thumbnail_width":145,"provider_url":"http://www.hulu.com/","duration":1286.87,"version":"1.0","thumbnail_height":80,"width":512}'
+        allowfullscreen> </iframe>","version":"1.0","air_date":"Thu Oct 13 00:00:00
+        UTC 2011","large_thumbnail_height":288,"author_name":"NBC","provider_name":"Hulu","duration":1286.87,"thumbnail_width":145,"provider_url":"http://www.hulu.com/"}'
     http_version: 
-  recorded_at: Tue, 15 Apr 2014 02:52:18 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Fri, 06 Jun 2014 02:59:56 GMT
+recorded_with: VCR 2.9.2

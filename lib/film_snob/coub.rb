@@ -16,5 +16,6 @@ class FilmSnob
     def self.oembed_endpoint
       'http://coub.com/api/oembed.json'
     end
+
   end
 end

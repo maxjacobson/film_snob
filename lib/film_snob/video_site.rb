@@ -26,15 +26,38 @@ class FilmSnob
       ''
     end
 
+    def self.http
+      Net::HTTP.new(uri.host, uri.port).tap do |uri|
+        uri.use_ssl = use_ssl?
+      end
+    end
+
+    def self.use_ssl?
+      'https' == uri.scheme
+    end
+
     def title
-      oembed['title']
+      lookup :title
     end
 
     def html
-      oembed['html'] || (raise NotEmbeddableError, "#{clean_url} is not embeddable")
+      lookup :html
     end
 
     private
+
+      def not_embeddable!
+        raise NotEmbeddableError, "#{clean_url} is not embeddable"
+      end
+
+      def self.uri
+        URI.parse(oembed_endpoint)
+      end
+
+      def lookup(attribute)
+        oembed[attribute.to_s] || not_embeddable!
+      end
+
       def matching_pattern
         self.class.valid_url_patterns.find do |pattern|
           pattern.match(url)
@@ -42,13 +65,24 @@ class FilmSnob
       end
 
       def oembed
-        uri = URI(self.class.oembed_endpoint)
-        params = { url: clean_url }.merge(options)
-        uri.query = URI.encode_www_form(params)
-
-        @oembed ||= JSON.parse(Net::HTTP.get(uri))
-      rescue JSON::ParserError
-        raise InvalidJSONError.new("request to #{clean_url} return invalid JSON")
+        @oembed ||= JSON.parse response.body
+      rescue
+        @oembed = {}
       end
+
+      def response
+        self.class.http.request get
+      end
+
+      def get
+        Net::HTTP::Get.new uri.request_uri
+      end
+
+      def uri
+        URI(self.class.oembed_endpoint).tap do |uri|
+          uri.query = URI.encode_www_form({ url: clean_url }.merge(options))
+        end
+      end
+
   end
 end

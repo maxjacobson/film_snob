@@ -14,15 +14,6 @@ describe FilmSnob do
     end
   end
 
-  describe 'invalid receive' do
-    it 'should return FilmSnob::InvalidJSONError error' do
-      VCR.use_cassette('invalid json') do
-        snob = FilmSnob.new("https://youtube.com/watch?v=malformedid")
-        expect{snob.title}.to raise_error(FilmSnob::InvalidJSONError)
-      end
-    end
-  end
-
   describe 'YouTube URLs' do
     it 'should parse normal YouTube URLs' do
       snob = FilmSnob.new("https://www.youtube.com/watch?v=7q5Ltr0qc8c")
@@ -61,6 +52,13 @@ describe FilmSnob do
       expect(snob.id).to eq '1Ee4bfu_t3c'
       expect(snob.site).to eq :youtube
       expect(snob.clean_url).to eq 'https://www.youtube.com/watch?v=1Ee4bfu_t3c'
+    end
+
+    it 'should raise a not embeddable error for a missing video URL' do
+      VCR.use_cassette('missing video') do
+        snob = FilmSnob.new("https://youtube.com/watch?v=malformedid")
+        expect{snob.title}.to raise_error(FilmSnob::NotEmbeddableError)
+      end
     end
   end
 

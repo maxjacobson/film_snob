@@ -6,47 +6,60 @@ http_interactions:
     body:
       encoding: US-ASCII
       string: ''
-    headers: {}
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - vimeo.com
   response:
     status:
       code: 200
       message: OK
     headers:
+      Age:
+      - '1'
+      Date:
+      - Fri, 06 Jun 2014 02:59:55 GMT
+      Expires:
+      - Fri, 06 Jun 2014 03:00:55 GMT
+      Connection:
+      - Keep-Alive
+      Via:
+      - 1.1 varnish
+      - dnet-dca
+      Etag:
+      - '"3ee9abac968dd90ff3d61a6c3ed1e6aac5a93a7d"'
       Server:
       - Apache
       Access-Control-Allow-Origin:
-      - ! '*'
+      - "*"
       Access-Control-Allow-Headers:
       - X-Requested-With
-      Expires:
-      - Tue, 15 Apr 2014 02:53:16 GMT
       Last-Modified:
       - Sun, 13 Apr 2014 19:06:59 GMT
-      Etag:
-      - ! '"3ee9abac968dd90ff3d61a6c3ed1e6aac5a93a7d"'
       Vary:
       - Accept-Encoding
       Content-Type:
       - application/json
-      Transfer-Encoding:
-      - chunked
-      Date:
-      - Tue, 15 Apr 2014 02:52:16 GMT
+      Content-Length:
+      - '478'
+      Accept-Ranges:
+      - bytes
       X-Varnish:
-      - '273732503'
-      Age:
-      - '0'
-      Via:
-      - 1.1 varnish
+      - '1817515816'
       X-Varnish-Cache:
       - '0'
       Cneonction:
       - close
       X-Vserver:
-      - 10.90.128.147
+      - dfvimeowebproxy4
     body:
-      encoding: US-ASCII
-      string: ! '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Days
+      encoding: UTF-8
+      string: '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Days
         Like Today","author_name":"Stephen_Scott_Day","author_url":"http:\/\/vimeo.com\/stephenscottday","is_plus":"1","html":"<iframe
         src=\"\/\/player.vimeo.com\/video\/16010689\" width=\"1280\" height=\"720\"
         frameborder=\"0\" title=\"Days Like Today\" webkitallowfullscreen mozallowfullscreen
@@ -55,5 +68,5 @@ http_interactions:
         the whole thing, but if you do, lemme know. \n\nTuesday, October 19th, 2010.
         Somewhere between 3:40pm and 3:50pm. Alhambra, CA.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/97388869_1280.jpg","thumbnail_width":1280,"thumbnail_height":720,"video_id":16010689}'
     http_version: 
-  recorded_at: Tue, 15 Apr 2014 02:52:17 GMT
-recorded_with: VCR 2.9.0
+  recorded_at: Fri, 06 Jun 2014 02:59:55 GMT
+recorded_with: VCR 2.9.2
