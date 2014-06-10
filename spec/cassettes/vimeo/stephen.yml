@@ -25,7 +25,7 @@ http_interactions:
       Access-Control-Allow-Headers:
       - X-Requested-With
       Expires:
-      - Tue, 10 Jun 2014 19:32:22 GMT
+      - Tue, 10 Jun 2014 19:34:04 GMT
       Last-Modified:
       - Sun, 13 Apr 2014 19:06:59 GMT
       Etag:
@@ -39,9 +39,9 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 10 Jun 2014 19:31:22 GMT
+      - Tue, 10 Jun 2014 19:33:04 GMT
       X-Varnish:
-      - '1993398414'
+      - '1580370168'
       Age:
       - '0'
       Via:
@@ -51,7 +51,7 @@ http_interactions:
       Connection:
       - close
       X-Vserver:
-      - dfvimeowebproxy4
+      - dfvimeowebproxy1
     body:
       encoding: UTF-8
       string: '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Days
@@ -63,5 +63,5 @@ http_interactions:
         the whole thing, but if you do, lemme know. \n\nTuesday, October 19th, 2010.
         Somewhere between 3:40pm and 3:50pm. Alhambra, CA.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/97388869_1280.jpg","thumbnail_width":1280,"thumbnail_height":720,"video_id":16010689}'
     http_version: 
-  recorded_at: Tue, 10 Jun 2014 19:31:22 GMT
+  recorded_at: Tue, 10 Jun 2014 19:33:05 GMT
 recorded_with: VCR 2.9.2

@@ -10,7 +10,7 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - '*/*'
       User-Agent:
       - Ruby
   response:
@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - nginx/1.6.0
       Date:
-      - Tue, 10 Jun 2014 19:31:25 GMT
+      - Sat, 14 Jun 2014 17:58:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -37,9 +37,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 63769827807dcb768b5cc59171fc43ed
+      - 81f87a96c58b8c31b7c28ee4f0c7ad81
       X-Runtime:
-      - '0.013475'
+      - '0.009698'
       X-Rack-Cache:
       - miss
     body:
@@ -49,5 +49,5 @@ http_interactions:
         src=\"http://coub.com/embed/rcd14cm\" allowfullscreen=\"true\" frameborder=\"0\"
         width=\"640\" height=\"489\"></iframe>"}'
     http_version: 
-  recorded_at: Tue, 10 Jun 2014 19:31:26 GMT
+  recorded_at: Sat, 14 Jun 2014 17:58:08 GMT
 recorded_with: VCR 2.9.2

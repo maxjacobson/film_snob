@@ -46,13 +46,13 @@ http_interactions:
       Vary:
       - Accept-Encoding
       Expires:
-      - Tue, 10 Jun 2014 19:31:25 GMT
+      - Tue, 10 Jun 2014 19:33:08 GMT
       Cache-Control:
       - max-age=0, no-cache, no-store
       Pragma:
       - no-cache
       Date:
-      - Tue, 10 Jun 2014 19:31:25 GMT
+      - Tue, 10 Jun 2014 19:33:08 GMT
       Content-Length:
       - '1751'
       Connection:
@@ -62,5 +62,5 @@ http_interactions:
       string: |
         {"type":"video","version":"1.0","provider_name":"Funny or Die","provider_url":"http://www.funnyordie.com","author_name":"Seth Green","author_url":"http://www.funnyordie.com/seth_green","title":"The Live Read of Space Jam with Blake Griffin","html":"\u003Ciframe src=\"http://www.funnyordie.com/embed/8db066d2e0\" width=\"960\" height=\"580\" frameborder=\"0\" allowfullscreen webkitallowfullscreen mozallowfullscreen\u003E\u003C/iframe\u003E\u003Cdiv style=\"text-align:left;font-size:x-small;margin-top:0;width:960px;\"\u003E\u003Ca href=\"http://www.funnyordie.com/videos/8db066d2e0/the-live-read-of-space-jam-with-blake-griffin\" title=\"from Seth Green, Blake Griffin, DeAndre Jordan, Danielle Fishel, Paul Scheer, Nick Kroll, Ben Schwartz, Jerrod Carmichael, Noah Garfinkel, Brandon Johnson, Melissa Stetten, Shelby Fero, Jensen Karp, Ally Hord, Funny Or Die, Matt Sweeney, BoTown Sound, and Nate Maggio\"\u003EThe Live Read of Space Jam with Blake Griffin\u003C/a\u003E from \u003Ca href=\"http://www.funnyordie.com/seth_green\"\u003ESeth Green\u003C/a\u003E      \u003Ciframe src=\"http://www.facebook.com/plugins/like.php?app_id=138711277798\u0026amp;href=http%3A%2F%2Fwww.funnyordie.com%2Fvideos%2F8db066d2e0%2Fthe-live-read-of-space-jam-with-blake-griffin\u0026amp;send=false\u0026amp;layout=button_count\u0026amp;width=150\u0026amp;show_faces=false\u0026amp;action=like\u0026amp;height=21\" scrolling=\"no\" frameborder=\"0\" style=\"border:none; overflow:hidden; width:90px; height:21px; vertical-align:middle;\" allowTransparency=\"true\"\u003E\u003C/iframe\u003E\n\u003C/div\u003E","width":960,"height":580,"thumbnail_width":464,"thumbnail_height":348,"thumbnail_url":"http://t.fod4.com/t/8db066d2e0/c480x270_58.jpg","duration":584.817}
     http_version: 
-  recorded_at: Tue, 10 Jun 2014 19:31:25 GMT
+  recorded_at: Tue, 10 Jun 2014 19:33:08 GMT
 recorded_with: VCR 2.9.2

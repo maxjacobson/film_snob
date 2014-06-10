@@ -21,7 +21,7 @@ http_interactions:
       Server:
       - DMS/1.0.42
       X-Dm-Backnode:
-      - web-091.adm.dailymotion.com:80
+      - web-107.adm.dailymotion.com:80
       Vary:
       - Accept-Encoding
       Cache-Control:
@@ -32,15 +32,15 @@ http_interactions:
       - policyref="http://www.dailymotion.com/w3c/p3p.xml", CP="IDC DSP CURa ADMa
         DEVa TAIa OUR BUS IND UNI COM NAV INT"
       Date:
-      - Tue, 10 Jun 2014 19:31:24 GMT
+      - Tue, 10 Jun 2014 19:33:06 GMT
       X-Dm-Lb:
       - 195.8.215.136
       X-Response-Time:
-      - 0.035735 seconds
+      - 0.029759 seconds
       Set-Cookie:
-      - dt=desktop; expires=Wed, 10-Jun-2015 19:31:24 GMT; Max-Age=31536000; path=/;
+      - dt=desktop; expires=Wed, 10-Jun-2015 19:33:06 GMT; Max-Age=31536000; path=/;
         domain=.dailymotion.com
-      - ts=412736; expires=Mon, 10-Jun-2024 19:31:24 GMT; Max-Age=315619200; path=/;
+      - ts=33936; expires=Mon, 10-Jun-2024 19:33:06 GMT; Max-Age=315619200; path=/;
         domain=.dailymotion.com
       X-Dm-Page:
       - in.html.oembed
@@ -53,5 +53,5 @@ http_interactions:
         src=\"http:\/\/www.dailymotion.com\/embed\/video\/xf02xp\" width=\"500\" height=\"287\"
         frameborder=\"0\"><\/iframe>","thumbnail_url":"http:\/\/s1.dmcdn.net\/YITp\/x240-GT0.jpg","thumbnail_width":320,"thumbnail_height":240}'
     http_version: 
-  recorded_at: Tue, 10 Jun 2014 19:31:24 GMT
+  recorded_at: Tue, 10 Jun 2014 19:33:07 GMT
 recorded_with: VCR 2.9.2

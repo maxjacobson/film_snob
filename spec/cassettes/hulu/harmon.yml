@@ -29,9 +29,9 @@ http_interactions:
       X-Ua-Compatible:
       - IE=EmulateIE9; IE=EmulateIE7
       Cache-Control:
-      - max-age=2835
+      - max-age=2732
       Date:
-      - Tue, 10 Jun 2014 19:31:24 GMT
+      - Tue, 10 Jun 2014 19:33:07 GMT
       Connection:
       - keep-alive
     body:
@@ -43,5 +43,5 @@ http_interactions:
         allowfullscreen> </iframe>","version":"1.0","air_date":"Thu Oct 13 00:00:00
         UTC 2011","large_thumbnail_height":288,"author_name":"NBC","provider_name":"Hulu","thumbnail_width":145,"provider_url":"http://www.hulu.com/"}'
     http_version: 
-  recorded_at: Tue, 10 Jun 2014 19:31:24 GMT
+  recorded_at: Tue, 10 Jun 2014 19:33:08 GMT
 recorded_with: VCR 2.9.2
