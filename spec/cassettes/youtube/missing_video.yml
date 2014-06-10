@@ -19,7 +19,7 @@ http_interactions:
       message: Not Found
     headers:
       Date:
-      - Tue, 10 Jun 2014 19:31:21 GMT
+      - Tue, 10 Jun 2014 19:33:03 GMT
       Server:
       - gwiseguy/2.0
       X-Xss-Protection:
@@ -27,16 +27,16 @@ http_interactions:
       P3p:
       - CP="This is not a P3P policy! See http://support.google.com/accounts/bin/answer.py?answer=151657&hl=en
         for more info."
-      Cache-Control:
-      - no-cache
       Expires:
       - Tue, 27 Apr 1971 19:44:06 EST
+      X-Content-Type-Options:
+      - nosniff
       X-Frame-Options:
       - ALLOWALL
       Content-Type:
       - text/html; charset=utf-8
-      X-Content-Type-Options:
-      - nosniff
+      Cache-Control:
+      - no-cache
       Content-Length:
       - '9'
       Alternate-Protocol:
@@ -45,5 +45,5 @@ http_interactions:
       encoding: UTF-8
       string: Not Found
     http_version: 
-  recorded_at: Tue, 10 Jun 2014 19:31:22 GMT
+  recorded_at: Tue, 10 Jun 2014 19:33:04 GMT
 recorded_with: VCR 2.9.2

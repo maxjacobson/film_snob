@@ -25,7 +25,7 @@ http_interactions:
       Access-Control-Allow-Headers:
       - X-Requested-With
       Expires:
-      - Tue, 10 Jun 2014 19:32:23 GMT
+      - Tue, 10 Jun 2014 19:34:05 GMT
       Last-Modified:
       - Tue, 10 Jun 2014 19:11:46 GMT
       Etag:
@@ -39,9 +39,9 @@ http_interactions:
       Accept-Ranges:
       - bytes
       Date:
-      - Tue, 10 Jun 2014 19:31:23 GMT
+      - Tue, 10 Jun 2014 19:33:05 GMT
       X-Varnish:
-      - '1580310529'
+      - '1426306345'
       Age:
       - '0'
       Via:
@@ -51,7 +51,7 @@ http_interactions:
       Connection:
       - close
       X-Vserver:
-      - dfvimeowebproxy1
+      - dfvimeowebproxy5
     body:
       encoding: UTF-8
       string: '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Murmuration","author_name":"Islands
@@ -62,5 +62,5 @@ http_interactions:
         Islands And Rivers\n\nFollow us @Islands_Rivers\n\nA chance encounter and
         shared moment with one of natures greatest and most fleeting phenomena.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/448600816_295x166.jpg","thumbnail_width":295,"thumbnail_height":221,"video_id":31158841}'
     http_version: 
-  recorded_at: Tue, 10 Jun 2014 19:31:23 GMT
+  recorded_at: Tue, 10 Jun 2014 19:33:06 GMT
 recorded_with: VCR 2.9.2
