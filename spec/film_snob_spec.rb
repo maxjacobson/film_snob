@@ -20,7 +20,7 @@ describe FilmSnob do
       expect(snob).to be_watchable
       expect(snob.id).to eq '7q5Ltr0qc8c'
       expect(snob.site).to eq :youtube
-      VCR.use_cassette('billy') do
+      VCR.use_cassette('youtube/billy') do
         expect(snob.title).to eq 'Billy on the Street: Amateur Speed Sketching!'
       end
     end
@@ -55,7 +55,7 @@ describe FilmSnob do
     end
 
     it 'should raise a not embeddable error for a missing video URL' do
-      VCR.use_cassette('missing video') do
+      VCR.use_cassette('youtube/missing video') do
         snob = FilmSnob.new("https://youtube.com/watch?v=malformedid")
         expect{snob.title}.to raise_error(FilmSnob::NotEmbeddableError)
       end
@@ -67,7 +67,7 @@ describe FilmSnob do
       snob = FilmSnob.new("https://vimeo.com/16010689")
       expect(snob.id).to eq '16010689'
       expect(snob.site).to eq :vimeo
-      VCR.use_cassette('stephen') do
+      VCR.use_cassette('vimeo/stephen') do
         expect(snob.title).to eq 'Days Like Today'
       end
     end
@@ -99,23 +99,61 @@ describe FilmSnob do
 
     it 'should allow oembed configuration' do
       snob = FilmSnob.new("http://vimeo.com/31158841", width: 400)
-      VCR.use_cassette 'murmuration' do
+      VCR.use_cassette('vimeo/murmuration') do
         expect(snob.html).to match %r{width="400"}
       end
 
       snob2 = FilmSnob.new('http://vimeo.com/31158841', width: 500)
-      VCR.use_cassette 'murmuration2' do
+      VCR.use_cassette('vimeo/murmuration2') do
         expect(snob2.html).to match %r{width="500"}
       end
     end
   end
+
+
+  describe 'dailymotion URLs' do
+    it 'should parse https dailymotion URLs' do
+      snob = FilmSnob.new("https://www.dailymotion.com/video/xf02xp_uffie-difficult_music")
+      expect(snob.id).to eq 'xf02xp_uffie-difficult_music'
+      expect(snob.site).to eq :dailymotion
+      VCR.use_cassette('dailymotion/music') do
+        expect(snob.title).to eq 'Uffie - Difficult'
+      end
+    end
+
+    it 'should parse http dailymotion URLs' do
+      snob = FilmSnob.new("http://www.dailymotion.com/video/xf02xp_uffie-difficult_music")
+      expect(snob.id).to eq 'xf02xp_uffie-difficult_music'
+      expect(snob.site).to eq :dailymotion
+    end
+
+    it 'should parse mobile dailymotion URLs' do
+      snob = FilmSnob.new("http://touch.dailymotion.com/video/xf02xp_uffie-difficult_music")
+      expect(snob.id).to eq 'xf02xp_uffie-difficult_music'
+      expect(snob.site).to eq :dailymotion
+      expect(snob.clean_url).to eq 'https://www.dailymotion.com/video/xf02xp_uffie-difficult_music'
+    end
+
+    it 'should allow oembed configuration' do
+      snob = FilmSnob.new("http://www.dailymotion.com/video/xf02xp_uffie-difficult_music", maxwidth: 400)
+      VCR.use_cassette('dailymotion/music1') do
+        expect(snob.html).to match %r{width="400"}
+      end
+
+      snob2 = FilmSnob.new('http://www.dailymotion.com/video/xf02xp_uffie-difficult_music', maxwidth: 500)
+      VCR.use_cassette('dailymotion/music500') do
+        expect(snob2.html).to match %r{width="500"}
+      end
+    end
+  end
+
 
   describe 'hulu URLs' do
     it 'should parse hulu URLs' do
       snob = FilmSnob.new("http://www.hulu.com/watch/285095")
       expect(snob.id).to eq '285095'
       expect(snob.site).to eq :hulu
-      VCR.use_cassette('harmon') do
+      VCR.use_cassette('hulu/harmon') do
         expect(snob.title).to eq 'Remedial Chaos Theory (Community)'
         expect{snob.html}.not_to raise_error
       end
@@ -127,7 +165,7 @@ describe FilmSnob do
       film = FilmSnob.new('http://www.funnyordie.com/videos/8db066d2e0/the-live-read-of-space-jam-with-blake-griffin')
       expect(film.id).to eq '8db066d2e0'
       expect(film.site).to eq :funnyordie
-      VCR.use_cassette 'space jam' do
+      VCR.use_cassette 'funnyordie/space jam' do
         expect(film.title).to eq 'The Live Read of Space Jam with Blake Griffin'
         expect{film.html}.not_to raise_error
       end
@@ -139,7 +177,7 @@ describe FilmSnob do
       film = FilmSnob.new('http://coub.com/view/rcd14cm')
       expect(film.id).to eq 'rcd14cm'
       expect(film.site).to eq :coub
-      VCR.use_cassette 'voodoo_people' do
+      VCR.use_cassette 'voodoo/voodoo_people' do
         expect(film.title).to eq 'voodoo people'
         expect{film.html}.not_to raise_error
       end
