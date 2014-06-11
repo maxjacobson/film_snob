@@ -1,22 +1,26 @@
-require "film_snob/coub"
-require "film_snob/funny_or_die"
-require "film_snob/hulu"
-require "film_snob/instagram"
-require "film_snob/vimeo"
-require "film_snob/youtube"
-require "film_snob/dailymotion"
+%w[
+  coub
+  dailymotion
+  funny_or_die
+  hulu
+  instagram
+  rutube
+  vimeo
+  youtube
+].each { |site| require "film_snob/video_sites/#{site}" }
 
 class FilmSnob
   class UrlToVideo
 
     VIDEO_SITES = [
-      Vimeo,
-      YouTube,
-      Hulu,
-      FunnyOrDie,
       Coub,
       Dailymotion,
-      Instagram
+      FunnyOrDie,
+      Hulu,
+      Instagram,
+      Rutube,
+      Vimeo,
+      YouTube
     ]
 
     attr_reader :url, :options

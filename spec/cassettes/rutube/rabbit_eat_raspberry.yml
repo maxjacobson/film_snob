@@ -1,0 +1,50 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://rutube.ru/api/oembed/?format=json&url=http://rutube.ru/video/586afc0f5c652439a2dca8b34d19a086/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.4.4
+      Date:
+      - Fri, 06 Jun 2014 02:59:56 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Vary:
+      - Accept-Encoding
+      Status:
+      - 200 OK
+      X-Ua-Compatible:
+      - IE=Edge,chrome=1
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 271c6fd4f094ad88c161efa47990e5e1
+      X-Runtime:
+      - '0.011259'
+      X-Rack-Cache:
+      - miss
+    body:
+      encoding: UTF-8
+      string: '{"type":"video","version":1,"title":"rabbit eat raspberry","width":720,"height":405,"provider_url":"http://rutube.ru","thumbnail_width":640,"thumbnail_height":360,"provider_name":"rutube","cache_age":180,"html":"<iframe width=\"720\" height=\"405\" src=\"//rutube.ru/play/embed/6972736\" frameborder=\"0\" webkitAllowFullScreen mozallowfullscreen allowfullscreen></iframe>","thumbnail_url":"http://pic.rutube.ru/video/1a/f5/1af5b1157194a7a9880a22f9014824ba.jpg?size=l","author_name":"Забавные животные","author_url":"http://rutube.ru/video/person/12144/"}'
+    http_version: 
+  recorded_at: Fri, 06 Jun 2014 02:59:56 GMT
+recorded_with: VCR 2.9.2

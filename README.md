@@ -42,13 +42,14 @@ film_snob uses the oembed protocol to get html for embed codes. These options as
 
 ## Supported video providers
 
-* YouTube
-* Vimeo
-* Hulu
-* Funny or Die
-* Coub
-* Instagram
-* Dailymotion
+* [Coub](http://coub.com)
+* [Dailymotion](http://www.dailymotion.com)
+* [Funny or Die](http://www.funnyordie.com)
+* [Hulu](http://www.hulu.com)
+* [Instagram](http://instagram.com)
+* [Rutube](http://rutube.ru)
+* [Vimeo](http://vimeo.com)
+* [YouTube](http://www.youtube.com)
 
 The same methods work with all of these providers.
 

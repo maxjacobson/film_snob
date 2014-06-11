@@ -2,6 +2,7 @@ require "film_snob/video_site"
 
 class FilmSnob
   class Instagram < VideoSite
+
     def self.valid_url_patterns
       [
         %r{https?://(?:(?:www).)?instagram.com/p/(\w+)},
@@ -24,5 +25,6 @@ class FilmSnob
       # which will raise an exception if it's not present
       title && %{<iframe src="//instagram.com/p/#{id}/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>}
     end
+
   end
 end
