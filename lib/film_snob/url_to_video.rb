@@ -3,6 +3,7 @@ require "film_snob/funny_or_die"
 require "film_snob/hulu"
 require "film_snob/vimeo"
 require "film_snob/youtube"
+require "film_snob/dailymotion"
 
 class FilmSnob
   class UrlToVideo
@@ -12,7 +13,8 @@ class FilmSnob
       YouTube,
       Hulu,
       FunnyOrDie,
-      Coub
+      Coub,
+      Dailymotion
     ]
 
     attr_reader :url, :options
