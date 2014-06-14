@@ -15,7 +15,8 @@ class FilmSnob
       Hulu,
       FunnyOrDie,
       Coub,
-      Dailymotion
+      Dailymotion,
+      Instagram
     ]
 
     attr_reader :url, :options

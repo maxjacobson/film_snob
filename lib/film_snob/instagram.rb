@@ -4,8 +4,8 @@ class FilmSnob
   class Instagram < VideoSite
     def self.valid_url_patterns
       [
-        %r{http?://(?:(?:www).)?instagram.com/p/(\w+)},
-        %r{http?://(?:(?:www).)?instagr.am/p/(\w+)}
+        %r{https?://(?:(?:www).)?instagram.com/p/(\w+)},
+        %r{https?://(?:(?:www).)?instagr.am/p/(\w+)}
       ]
     end
 
@@ -18,11 +18,11 @@ class FilmSnob
     end
 
     def html
-      if id
-        "<iframe src=\"//instagram.com/p/#{id}/embed/\" width=\"612\" height=\"710\" frameborder=\"0\" scrolling=\"no\" allowtransparency=\"true\"></iframe>"
-      else
-        raise NotEmbeddableError.new("#{clean_url} is not embeddable")
-      end
+      # instagram's oembed response does not include html, so we need to construct it
+      # but first we need to ensure that the response was good
+      # which we do by checking for the presence of the title,
+      # which will raise an exception if it's not present
+      title && %{<iframe src="//instagram.com/p/#{id}/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>}
     end
   end
 end
