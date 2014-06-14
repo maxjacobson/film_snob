@@ -1,6 +1,7 @@
 require "film_snob/coub"
 require "film_snob/funny_or_die"
 require "film_snob/hulu"
+require "film_snob/instagram"
 require "film_snob/vimeo"
 require "film_snob/youtube"
 require "film_snob/dailymotion"
@@ -14,7 +15,8 @@ class FilmSnob
       Hulu,
       FunnyOrDie,
       Coub,
-      Dailymotion
+      Dailymotion,
+      Instagram
     ]
 
     attr_reader :url, :options
