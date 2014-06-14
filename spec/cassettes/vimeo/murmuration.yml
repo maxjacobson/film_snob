@@ -13,45 +13,42 @@ http_interactions:
       - "*/*"
       User-Agent:
       - Ruby
-      Host:
-      - vimeo.com
   response:
     status:
       code: 200
       message: OK
     headers:
-      Age:
-      - '1'
-      Date:
-      - Fri, 06 Jun 2014 02:59:55 GMT
-      Expires:
-      - Fri, 06 Jun 2014 03:00:55 GMT
-      Content-Length:
-      - '793'
-      Connection:
-      - Keep-Alive
-      Via:
-      - 1.1 varnish
-      - dnet-dca
-      Etag:
-      - '"5ffeebb02a34c4b0edaf908978ae3dc7a08a8994"'
       Server:
       - Apache
       Access-Control-Allow-Origin:
       - "*"
       Access-Control-Allow-Headers:
       - X-Requested-With
+      Expires:
+      - Tue, 10 Jun 2014 19:34:05 GMT
       Last-Modified:
-      - Fri, 06 Jun 2014 02:09:21 GMT
+      - Tue, 10 Jun 2014 19:11:46 GMT
+      Etag:
+      - '"d8d616aef320a327e49d95e0cefe36c1e8a16060"'
       Vary:
       - Accept-Encoding
       Content-Type:
       - application/json
+      Content-Length:
+      - '439'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 10 Jun 2014 19:33:05 GMT
       X-Varnish:
-      - '1670035520'
+      - '1847121041'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
       X-Varnish-Cache:
       - '0'
-      Nncoection:
+      Connection:
       - close
       X-Vserver:
       - dfvimeowebproxy3
@@ -65,5 +62,5 @@ http_interactions:
         Islands And Rivers\n\nFollow us @Islands_Rivers\n\nA chance encounter and
         shared moment with one of natures greatest and most fleeting phenomena.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/448600816_295x166.jpg","thumbnail_width":295,"thumbnail_height":221,"video_id":31158841}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 02:59:55 GMT
+  recorded_at: Tue, 10 Jun 2014 19:33:05 GMT
 recorded_with: VCR 2.9.2

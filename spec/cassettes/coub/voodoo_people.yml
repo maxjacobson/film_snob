@@ -10,20 +10,18 @@ http_interactions:
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
-      - "*/*"
+      - '*/*'
       User-Agent:
       - Ruby
-      Host:
-      - coub.com
   response:
     status:
       code: 200
       message: OK
     headers:
       Server:
-      - nginx/1.4.4
+      - nginx/1.6.0
       Date:
-      - Fri, 06 Jun 2014 02:59:56 GMT
+      - Sat, 14 Jun 2014 17:58:08 GMT
       Content-Type:
       - application/json; charset=utf-8
       Transfer-Encoding:
@@ -39,9 +37,9 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 271c6fd4f094ad88c161efa47990e5e1
+      - 81f87a96c58b8c31b7c28ee4f0c7ad81
       X-Runtime:
-      - '0.011259'
+      - '0.009698'
       X-Rack-Cache:
       - miss
     body:
@@ -51,5 +49,5 @@ http_interactions:
         src=\"http://coub.com/embed/rcd14cm\" allowfullscreen=\"true\" frameborder=\"0\"
         width=\"640\" height=\"489\"></iframe>"}'
     http_version: 
-  recorded_at: Fri, 06 Jun 2014 02:59:56 GMT
+  recorded_at: Sat, 14 Jun 2014 17:58:08 GMT
 recorded_with: VCR 2.9.2
