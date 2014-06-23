@@ -1,13 +1,4 @@
-%w[
-  coub
-  dailymotion
-  funny_or_die
-  hulu
-  instagram
-  rutube
-  vimeo
-  youtube
-].each { |site| require "film_snob/video_sites/#{site}" }
+Dir[File.dirname(__FILE__) + '/video_sites/*.rb'].each { |site| puts site; require site }
 
 class FilmSnob
   class UrlToVideo
