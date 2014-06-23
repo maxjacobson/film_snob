@@ -7,4 +7,25 @@ describe FilmSnob::YouTube do
       expect{snob.html}.to raise_error(FilmSnob::NotEmbeddableError)
     end
   end
+
+  it 'can handle junked up URLs' do
+    VCR.use_cassette('youtube/pete') do
+      film = FilmSnob.new('http://www.youtube.com/watch?feature=youtube_gdata&v=fq-xGD_thXo')
+      expect(film).to be_watchable
+      expect(film.id).to eq 'fq-xGD_thXo'
+      expect{film.html}.to_not raise_error
+      expect(film.title).to eq 'Pete Meets Olympic Freestyle Skier Torin Yater-Wallace'
+    end
+  end
+
+  it 'can handle even more junked up URLs' do
+    VCR.use_cassette('youtube/dilla') do
+      film = FilmSnob.new('http://www.youtube.com/watch?feature=youtu.be&v=lC0JFXw_6kQ')
+
+      expect(film).to be_watchable
+      expect(film.id).to eq 'lC0JFXw_6kQ'
+      expect{film.html}.to_not raise_error
+      expect(film.title).to eq 'BINKBEATS Beats Unraveled #6: J. Dilla Live Mixtape'
+    end
+  end
 end
