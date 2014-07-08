@@ -1,6 +1,7 @@
 require "film_snob/version"
 require "film_snob/url_to_video"
 require "film_snob/exceptions"
+require 'film_snob/video_site'
 
 class FilmSnob
   attr_reader :url

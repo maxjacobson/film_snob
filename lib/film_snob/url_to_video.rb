@@ -1,22 +1,17 @@
-require "film_snob/coub"
-require "film_snob/funny_or_die"
-require "film_snob/hulu"
-require "film_snob/instagram"
-require "film_snob/vimeo"
-require "film_snob/youtube"
-require "film_snob/dailymotion"
+Dir[File.dirname(__FILE__) + '/video_sites/*.rb'].each { |site| puts site; require site }
 
 class FilmSnob
   class UrlToVideo
 
     VIDEO_SITES = [
-      Vimeo,
-      YouTube,
-      Hulu,
-      FunnyOrDie,
       Coub,
       Dailymotion,
-      Instagram
+      FunnyOrDie,
+      Hulu,
+      Instagram,
+      Rutube,
+      Vimeo,
+      YouTube
     ]
 
     attr_reader :url, :options

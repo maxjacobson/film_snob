@@ -162,7 +162,7 @@ describe FilmSnob do
 
   describe 'funny or die URLs' do
     it 'should parse funny or die URLs' do
-      film = FilmSnob.new('http://www.funnyordie.com/videos/8db066d2e0/the-live-read-of-space-jam-with-blake-griffin')
+      film = FilmSnob.new("http://www.funnyordie.com/videos/8db066d2e0/the-live-read-of-space-jam-with-blake-griffin")
       expect(film.id).to eq '8db066d2e0'
       expect(film.site).to eq :funnyordie
       VCR.use_cassette 'funnyordie/space jam' do
@@ -211,11 +211,23 @@ describe FilmSnob do
 
   describe 'coub URLs' do
     it 'should parse coub URLs' do
-      film = FilmSnob.new('http://coub.com/view/rcd14cm')
+      film = FilmSnob.new("http://coub.com/view/rcd14cm")
       expect(film.id).to eq 'rcd14cm'
       expect(film.site).to eq :coub
       VCR.use_cassette 'coub/voodoo_people' do
         expect(film.title).to eq 'voodoo people'
+        expect{film.html}.not_to raise_error
+      end
+    end
+  end
+
+  describe 'rutube URLs' do
+    it 'should parse rutube URLs' do
+      film = FilmSnob.new("http://rutube.ru/video/586afc0f5c652439a2dca8b34d19a086/")
+      expect(film.id).to eq '586afc0f5c652439a2dca8b34d19a086'
+      expect(film.site).to eq :rutube
+      VCR.use_cassette 'rutube/rabbit_eat_raspberry' do
+        expect(film.title).to eq 'rabbit eat raspberry'
         expect{film.html}.not_to raise_error
       end
     end
