@@ -5,6 +5,7 @@ require "film_snob/instagram"
 require "film_snob/vimeo"
 require "film_snob/youtube"
 require "film_snob/dailymotion"
+require "film_snob/rdio"
 
 class FilmSnob
   class UrlToVideo
