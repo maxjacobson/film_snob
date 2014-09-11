@@ -16,7 +16,8 @@ class FilmSnob
       FunnyOrDie,
       Coub,
       Dailymotion,
-      Instagram
+      Instagram,
+      Rdio
     ]
 
     attr_reader :url, :options
