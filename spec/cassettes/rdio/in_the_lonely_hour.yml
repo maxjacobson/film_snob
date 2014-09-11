@@ -1,0 +1,53 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.rdio.com/api/oembed/?url=http://www.rdio.com/artist/Sam_Smith/album/In_The_Lonely_Hour/
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.2.4
+      Date:
+      - Thu, 11 Sep 2014 02:34:44 GMT
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '428'
+      Connection:
+      - keep-alive
+      X-Srv:
+      - srv-210-27
+      Content-Language:
+      - en
+      Vary:
+      - Accept-Language, Cookie
+      P3p:
+      - CP="This is not a P3P policy. See http://www.rdio.com/legal/privacy-policy
+        for more info."
+      Set-Cookie:
+      - r=eyJfZSI6IDB9.TntV3ezgjIEgu4PtxiO8mTYQsJM; Domain=.rdio.com; Path=/
+      X-Version:
+      - '720'
+    body:
+      encoding: UTF-8
+      string: '{"provider_url": "http://www.rdio.com", "version": "1.0", "thumbnail_width":
+        200, "height": 400, "thumbnail_height": 200, "title": "In The Lonely Hour",
+        "html": "<iframe width=\"400\" height=\"400\" src=\"https://rd.io/i/Qj4B7RE//?source=oembed\"
+        frameborder=\"0\"></iframe>", "width": 400, "thumbnail_url": "http://rdio3img-a.akamaihd.net/album/2/5/2/000000000043b252/3/square-400.jpg",
+        "provider_name": "Rdio", "type": "rich"}'
+    http_version: 
+  recorded_at: Thu, 11 Sep 2014 02:34:42 GMT
+recorded_with: VCR 2.9.3
