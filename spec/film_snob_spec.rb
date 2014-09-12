@@ -62,16 +62,22 @@ describe FilmSnob do
     end
   end
 
-  describe 'rdio URLs'
+  describe 'rdio URLs' do
     it 'should parse normal album rdio URLs' do
       snob = FilmSnob.new("http://www.rdio.com/artist/Sam_Smith/album/In_The_Lonely_Hour/")
       expect(snob).to be_watchable
-      # expect(snob.id).to eq '7q5Ltr0qc8c'
+      expect(snob.id).to_not be_nil
       expect(snob.site).to eq :rdio
       VCR.use_cassette('rdio/in_the_lonely_hour') do
         expect(snob.title).to eq 'In The Lonely Hour'
       end
     end
+    
+    it 'should not allow weak matches for rdio urls' do 
+      snob = FilmSnob.new("google.com/q=rdio")
+      expect(snob).to_not be_watchable
+    end
+  end
 
   describe 'vimeo URLs' do
     it 'should parse https vimeo URLs' do
