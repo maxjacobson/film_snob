@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=7q5Ltr0qc8c
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 10 Jun 2014 19:33:02 GMT
+      Server:
+      - gwiseguy/2.0
+      X-Content-Type-Options:
+      - nosniff
+      X-Xss-Protection:
+      - 1; mode=block; report=https://www.google.com/appserve/security-bugs/log/youtube
+      P3p:
+      - CP="This is not a P3P policy! See http://support.google.com/accounts/bin/answer.py?answer=151657&hl=en
+        for more info."
+      Expires:
+      - Tue, 27 Apr 1971 19:44:06 EST
+      Cache-Control:
+      - no-cache
+      Content-Type:
+      - application/json
+      X-Frame-Options:
+      - ALLOWALL
+      Alternate-Protocol:
+      - 443:quic
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"thumbnail_width": 480, "type": "video", "height": 270, "author_name":
+        "billyonthestreettv", "thumbnail_url": "http:\/\/i1.ytimg.com\/vi\/7q5Ltr0qc8c\/hqdefault.jpg",
+        "html": "\u003ciframe width=\"480\" height=\"270\" src=\"http:\/\/www.youtube.com\/embed\/7q5Ltr0qc8c?feature=oembed\"
+        frameborder=\"0\" allowfullscreen\u003e\u003c\/iframe\u003e", "title": "Billy
+        on the Street: Amateur Speed Sketching!", "author_url": "http:\/\/www.youtube.com\/user\/billyonthestreettv",
+        "provider_name": "YouTube", "width": 480, "version": "1.0", "thumbnail_height":
+        360, "provider_url": "http:\/\/www.youtube.com\/"}'
+    http_version: 
+  recorded_at: Tue, 10 Jun 2014 19:33:02 GMT
+recorded_with: VCR 2.9.2

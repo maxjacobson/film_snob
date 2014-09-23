@@ -1,0 +1,66 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://vimeo.com/api/oembed.json?url=https://vimeo.com/31158841&width=500
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Apache
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - X-Requested-With
+      Expires:
+      - Tue, 10 Jun 2014 19:34:05 GMT
+      Last-Modified:
+      - Tue, 10 Jun 2014 19:11:46 GMT
+      Etag:
+      - '"d8d616aef320a327e49d95e0cefe36c1e8a16060"'
+      Vary:
+      - Accept-Encoding
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '442'
+      Accept-Ranges:
+      - bytes
+      Date:
+      - Tue, 10 Jun 2014 19:33:05 GMT
+      X-Varnish:
+      - '1426306345'
+      Age:
+      - '0'
+      Via:
+      - 1.1 varnish
+      X-Varnish-Cache:
+      - '0'
+      Connection:
+      - close
+      X-Vserver:
+      - dfvimeowebproxy5
+    body:
+      encoding: UTF-8
+      string: '{"type":"video","version":"1.0","provider_name":"Vimeo","provider_url":"https:\/\/vimeo.com\/","title":"Murmuration","author_name":"Islands
+        & Rivers","author_url":"http:\/\/vimeo.com\/islandsandrivers","is_plus":"1","html":"<iframe
+        src=\"\/\/player.vimeo.com\/video\/31158841\" width=\"500\" height=\"375\"
+        frameborder=\"0\" title=\"Murmuration\" webkitallowfullscreen mozallowfullscreen
+        allowfullscreen><\/iframe>","width":500,"height":375,"duration":123,"description":"www.islandsandrivers.com\n\nFacebook:
+        Islands And Rivers\n\nFollow us @Islands_Rivers\n\nA chance encounter and
+        shared moment with one of natures greatest and most fleeting phenomena.","thumbnail_url":"http:\/\/i.vimeocdn.com\/video\/448600816_295x166.jpg","thumbnail_width":295,"thumbnail_height":221,"video_id":31158841}'
+    http_version: 
+  recorded_at: Tue, 10 Jun 2014 19:33:06 GMT
+recorded_with: VCR 2.9.2

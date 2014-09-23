@@ -1,0 +1,52 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://api.instagram.com/oembed?url=http://instagram.com/p/nothinghere
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: NOT FOUND
+    headers:
+      Cache-Control:
+      - private, no-cache, no-store, must-revalidate
+      Content-Language:
+      - en
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Sat, 14 Jun 2014 18:32:21 GMT
+      Expires:
+      - Sat, 01 Jan 2000 00:00:00 GMT
+      Pragma:
+      - no-cache
+      Server:
+      - nginx
+      Set-Cookie:
+      - ccode=US; Path=/
+      - csrftoken=a0b5eadbb95eef7aeb5827d2f9d4463a; expires=Sat, 13-Jun-2015 18:32:21
+        GMT; Max-Age=31449600; Path=/
+      - mid=U5yVNQAEAAESFFbkTkaqHKJGfs3C; expires=Fri, 09-Jun-2034 18:32:21 GMT; Max-Age=630720000;
+        Path=/
+      Vary:
+      - Cookie, Accept-Language
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+    body:
+      encoding: UTF-8
+      string: No Media Match
+    http_version: 
+  recorded_at: Sat, 14 Jun 2014 18:32:21 GMT
+recorded_with: VCR 2.9.2
