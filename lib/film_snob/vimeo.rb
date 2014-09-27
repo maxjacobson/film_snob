@@ -2,7 +2,6 @@ require "film_snob/video_site"
 
 class FilmSnob
   class Vimeo < VideoSite
-
     def self.valid_url_patterns
       [
         %r{https?://vimeo.com/(\d{1,})},
@@ -16,8 +15,8 @@ class FilmSnob
     end
 
     def self.oembed_endpoint
-      'http://vimeo.com/api/oembed.json'
+      "http://vimeo.com/api/oembed.json"
     end
-
   end
 end
+
