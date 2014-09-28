@@ -1,15 +1,16 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
+lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'film_snob/version'
+require "film_snob/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "film_snob"
   spec.version       = FilmSnob::VERSION
   spec.authors       = ["Max Jacobson"]
   spec.email         = ["max@hardscrabble.net"]
-  spec.summary       = %q{Fetch embed codes for videos}
-  spec.description   = %q{Find information about URLs from video sites, such as the title and embed code of the video}
+  spec.summary       = "Fetch embed codes for videos"
+  spec.description   = "Find information about URLs from video sites, " \
+                       "such as the title and embed code of the video"
   spec.homepage      = "https://github.com/maxjacobson/film_snob"
   spec.license       = "MIT"
 
@@ -26,5 +27,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry",      "~> 0.9"
   spec.add_development_dependency "rubocop",  "~> 0.26.1"
 
-  spec.required_ruby_version = '>= 1.9.3'
+  spec.required_ruby_version = ">= 1.9.3"
 end
+

@@ -10,7 +10,7 @@ class FilmSnob
     end
 
     def self.oembed_endpoint
-      'http://api.instagram.com/oembed'
+      "http://api.instagram.com/oembed"
     end
 
     def clean_url
@@ -18,11 +18,20 @@ class FilmSnob
     end
 
     def html
-      # instagram's oembed response does not include html, so we need to construct it
+      # instagram's oembed response does not include html,
+      # so we need to construct it
       # but first we need to ensure that the response was good
       # which we do by checking for the presence of the title,
-      # which will raise an exception if it's not present
-      title && %{<iframe src="//instagram.com/p/#{id}/embed/" width="612" height="710" frameborder="0" scrolling="no" allowtransparency="true"></iframe>}
+      # which will raise an exception if it"s not present
+      title && constructed_html
+    end
+
+    private
+
+    def constructed_html
+      "<iframe src='//instagram.com/p/#{id}/embed/' width='612' height='710' " \
+      "frameborder='0' scrolling='no' allowtransparency='true'></iframe>"
     end
   end
 end
+

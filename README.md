@@ -8,9 +8,9 @@ Helps parse URLs of web videos.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Add this line to your application"s Gemfile:
 
-    gem 'film_snob'
+    gem "film_snob"
 
 And then execute:
 
@@ -39,7 +39,7 @@ film.title #=> "Garann Means - Bacon is bad for you"
 film.html  #=> "<iframe src=\"//player.vimeo.com/video/64683454\" width=\"720\" height=\"405\" frameborder=\"0\" title=\"Garann Means - Bacon is bad for you\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 ```
 
-film_snob uses the oembed protocol to get html for embed codes. These options assume some knowledge of the endpoint's API. The above vimeo example works because they [have an extensively documented API](http://developer.vimeo.com/apis/oembed) which allows tons of configuration. The other two don't seem to have any documentation or configuration at all.
+film_snob uses the oembed protocol to get html for embed codes. These options assume some knowledge of the endpoint's API. The above vimeo example works because they [have an extensively documented API](http://developer.vimeo.com/apis/oembed) which allows tons of configuration. The other two don"t seem to have any documentation or configuration at all.
 
 ## Supported video providers
 
@@ -65,6 +65,6 @@ Run `rubocop` and try to keep the cops happy.
 
 1. Fork it ( https://github.com/maxjacobson/film_snob/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
+3. Commit your changes (`git commit -am "Add some feature"`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
