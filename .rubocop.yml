@@ -1,4 +1,4 @@
-# Disabling this because I don"t love using the return keyword
+# Disabling this because I don't love using the return keyword
 # and sometimes lines get long and difficult to read that way
 Style/GuardClause:
   Description: "Check for conditionals that can be replaced with guard clauses"
