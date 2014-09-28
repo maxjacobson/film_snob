@@ -57,6 +57,10 @@ The same methods work with all of these providers.
 
 Run `rake` to run all of the rspecs.
 
+## Code Style
+
+Run `rubocop` and try to keep the cops happy.
+
 ## Contributing
 
 1. Fork it ( https://github.com/maxjacobson/film_snob/fork )
