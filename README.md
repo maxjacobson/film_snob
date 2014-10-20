@@ -10,7 +10,7 @@ Helps parse URLs of web videos.
 
 Add this line to your application's Gemfile:
 
-    gem 'film_snob'
+    gem "film_snob"
 
 And then execute:
 
@@ -57,10 +57,14 @@ The same methods work with all of these providers.
 
 Run `rake` to run all of the rspecs.
 
+## Code Style
+
+Run `rubocop` and try to keep the cops happy.
+
 ## Contributing
 
 1. Fork it ( https://github.com/maxjacobson/film_snob/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
+3. Commit your changes (`git commit -am "Add some feature"`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request

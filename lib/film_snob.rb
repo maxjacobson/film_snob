@@ -5,7 +5,7 @@ require "film_snob/exceptions"
 class FilmSnob
   attr_reader :url
 
-  def initialize(url, options={})
+  def initialize(url, options = {})
     @url = url
     @video = UrlToVideo.new(url, options).video
   end
@@ -24,17 +24,16 @@ class FilmSnob
 
   private
 
-    def video
-      if watchable?
-        @video
-      else
-        raise NotSupportedURLError, "#{url} is not a supported URL"
-      end
+  def video
+    if watchable?
+      @video
+    else
+      raise NotSupportedURLError, "#{url} is not a supported URL"
     end
+  end
 
-    def delegated_video_methods
-      [:site, :id, :clean_url, :title, :html]
-    end
-
+  def delegated_video_methods
+    [:site, :id, :clean_url, :title, :html]
+  end
 end
 

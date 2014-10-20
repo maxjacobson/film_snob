@@ -2,7 +2,6 @@ require "film_snob/video_site"
 
 class FilmSnob
   class Coub < VideoSite
-
     def self.valid_url_patterns
       [
         %r{https?://coub.com/view/(\w*)}
@@ -14,8 +13,8 @@ class FilmSnob
     end
 
     def self.oembed_endpoint
-      'http://coub.com/api/oembed.json'
+      "http://coub.com/api/oembed.json"
     end
-
   end
 end
+

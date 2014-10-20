@@ -8,7 +8,6 @@ require "film_snob/dailymotion"
 
 class FilmSnob
   class UrlToVideo
-
     VIDEO_SITES = [
       Vimeo,
       YouTube,
@@ -27,18 +26,18 @@ class FilmSnob
     end
 
     def video
-      site.nil?? nil : site.new(url, options)
+      site.nil? ? nil : site.new(url, options)
     end
 
     private
 
-      def site
-        @site ||= VIDEO_SITES.find do |site|
-          site.valid_url_patterns.any? do |pattern|
-            pattern.match(url)
-          end
+    def site
+      @site ||= VIDEO_SITES.find do |site|
+        site.valid_url_patterns.any? do |pattern|
+          pattern.match(url)
         end
       end
-
+    end
   end
 end
+
