@@ -1,5 +1,4 @@
 # film_snob
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/maxjacobson/film_snob?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Build Status](https://travis-ci.org/maxjacobson/film_snob.svg?branch=master)](https://travis-ci.org/maxjacobson/film_snob)
 [![Gem Version](https://badge.fury.io/rb/film_snob.svg)](http://badge.fury.io/rb/film_snob)
@@ -63,6 +62,12 @@ Run `rake` to run all of the rspecs.
 
 Run `rubocop` and try to keep the cops happy.
 
+## Questions?
+
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/maxjacobson/film_snob?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
+Ping me in [the Gitter chat room](https://gitter.im/maxjacobson/film_snob) or [create a GitHub issue](https://github.com/maxjacobson/film_snob/issues/new)
+
 ## Contributing
 
 1. Fork it ( https://github.com/maxjacobson/film_snob/fork )
@@ -70,3 +75,4 @@ Run `rubocop` and try to keep the cops happy.
 3. Commit your changes (`git commit -am "Add some feature"`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
+
