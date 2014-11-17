@@ -1,4 +1,5 @@
 # film_snob
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/maxjacobson/film_snob?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 [![Build Status](https://travis-ci.org/maxjacobson/film_snob.svg?branch=master)](https://travis-ci.org/maxjacobson/film_snob)
 [![Gem Version](https://badge.fury.io/rb/film_snob.svg)](http://badge.fury.io/rb/film_snob)
