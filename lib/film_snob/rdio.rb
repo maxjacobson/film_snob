@@ -5,10 +5,8 @@ class FilmSnob
 
     def self.valid_url_patterns
       [
-        %r{http?://www.rdio.com/([\w\d\-_]+)/([\w\d\-_]+/album/)}, %r{http?://www.rdio.com/([\w\d\-_]+)/([\w\d\-_]+/album/)/([\w\d\-_]+)/track/} 
-
-        # http://www.rdio.com/artist/Sam_Smith/album/In_The_Lonely_Hour/track/Stay_With_Me/,
-        # http://www.rdio.com/artist/Sam_Smith/album/In_The_Lonely_Hour/
+        %r{http?://www.rdio.com/artist/(?:[\w\d\-_]+/album/)}, 
+	%r{http?://www.rdio.com/artist/(?:[\w\d\-_]+/album/)/(?:[\w\d\-_]+)/track/} 
       ]
     end
 

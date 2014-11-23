@@ -66,7 +66,6 @@ describe FilmSnob do
     it 'should parse normal album rdio URLs' do
       snob = FilmSnob.new("http://www.rdio.com/artist/Sam_Smith/album/In_The_Lonely_Hour/")
       expect(snob).to be_watchable
-      expect(snob.id).to_not be_nil
       expect(snob.site).to eq :rdio
       VCR.use_cassette('rdio/in_the_lonely_hour') do
         expect(snob.title).to eq 'In The Lonely Hour'
