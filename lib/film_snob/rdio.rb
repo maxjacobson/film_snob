@@ -5,13 +5,13 @@ class FilmSnob
 
     def self.valid_url_patterns
       [
-        %r{http?://www.rdio.com/artist/(?:[\w\d\-_]+/album/)}, 
-	%r{http?://www.rdio.com/artist/(?:[\w\d\-_]+/album/)/(?:[\w\d\-_]+)/track/} 
+        %r{http?://www.rdio.com/artist/(?:[\w\d\-_]+/album/)},
+	%r{http?://www.rdio.com/artist/(?:[\w\d\-_]+/album/)/(?:[\w\d\-_]+)/track/}
       ]
     end
 
     def clean_url
-      @clean_url = url 
+      @clean_url = url
     end
 
     def self.oembed_endpoint

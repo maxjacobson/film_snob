@@ -1,5 +1,4 @@
 require "film_snob/coub"
-require 'pry'
 require "film_snob/funny_or_die"
 require "film_snob/hulu"
 require "film_snob/instagram"
@@ -39,7 +38,6 @@ class FilmSnob
         @site ||= VIDEO_SITES.find do |site|
           site.valid_url_patterns.any? do |pattern|
             pattern.match(url)
-	    binding.pry
           end
         end
       end
