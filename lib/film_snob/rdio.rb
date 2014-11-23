@@ -17,6 +17,5 @@ class FilmSnob
     def self.oembed_endpoint
       'http://www.rdio.com/api/oembed/'
     end
-
   end
 end

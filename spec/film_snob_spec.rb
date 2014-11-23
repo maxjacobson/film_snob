@@ -81,8 +81,8 @@ describe FilmSnob do
         expect(snob.title).to eq 'Stay With Me'
       end
     end
-    
-    it 'should not allow weak matches for rdio urls' do 
+
+    it 'should not allow weak matches for rdio urls' do
       snob = FilmSnob.new("google.com/q=rdio")
       expect(snob).to_not be_watchable
     end
@@ -103,8 +103,7 @@ describe FilmSnob do
       expect(snob.id).to eq '16010689'
       expect(snob.site).to eq :vimeo
     end
-
-    it 'should parse mobile vimeo URLs' do
+it 'should parse mobile vimeo URLs' do
       snob = FilmSnob.new("http://vimeo.com/m/16010689")
       expect(snob.id).to eq '16010689'
       expect(snob.site).to eq :vimeo
