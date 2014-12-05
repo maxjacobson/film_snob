@@ -18,7 +18,7 @@ class FilmSnob
   end
 
   deprecated_alias :watchable?, :embeddable?, \
-    "#watchable? will be deprecated as of v1.0."
+                   "#watchable? will be deprecated as of v1.0."
 
   def method_missing(message)
     if delegated_video_methods.include?(message)
