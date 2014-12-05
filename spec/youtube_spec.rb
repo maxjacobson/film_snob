@@ -13,7 +13,7 @@ describe FilmSnob::YouTube do
       url = "http://www.youtube.com/watch?feature=youtube_gdata&v=fq-xGD_thXo"
       title = "Pete Meets Olympic Freestyle Skier Torin Yater-Wallace"
       film = FilmSnob.new(url)
-      expect(film).to be_watchable
+      expect(film).to be_embeddable
       expect(film.id).to eq "fq-xGD_thXo"
       expect { film.html }.to_not raise_error
       expect(film.title).to eq title
@@ -26,7 +26,7 @@ describe FilmSnob::YouTube do
       title = "BINKBEATS Beats Unraveled #6: J. Dilla Live Mixtape"
       film = FilmSnob.new(url)
 
-      expect(film).to be_watchable
+      expect(film).to be_embeddable
       expect(film.id).to eq "lC0JFXw_6kQ"
       expect { film.html }.to_not raise_error
       expect(film.title).to eq title

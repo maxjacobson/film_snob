@@ -25,7 +25,7 @@ Or install it yourself as:
 
 ```ruby
 film = FilmSnob.new("https://www.youtube.com/watch?v=GwT3zH16w3s")
-film.watchable? #=> true
+film.embeddable? #=> true
 film.site       #=> :youtube
 film.id         #=> "GwT3zH16w3s"
 film.title      #=> "What Are You, The Coolest? With Robert Rodriguez"
