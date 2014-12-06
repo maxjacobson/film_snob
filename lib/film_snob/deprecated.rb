@@ -1,14 +1,12 @@
-module Deprecated
-  def deprecated_alias(previous, replacement, warning = nil)
-    define_method(previous) do |*args, &block|
-      if warning
-        warn "WARNING: #{warning.strip} " \
-             "Please use ##{replacement} instead."
-      else
-        warn "WARNING: ##{previous} is deprecated. " \
-             "Please use ##{replacement} instead."
+class FilmSnob
+  module Deprecated
+    def deprecated_alias(previous, replacement, options)
+      define_method(previous) do |*args, &block|
+        Kernel.warn "WARNING: ##{previous} is deprecated and " \
+                    "will be removed in #{options[:removed_in]}. " \
+                    "Please use ##{replacement} instead."
+        send(replacement, *args, &block)
       end
-      send replacement, *args, &block
     end
   end
 end
