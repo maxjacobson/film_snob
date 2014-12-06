@@ -17,6 +17,15 @@ class FilmSnob
       @site ||= self.class.to_s.split("::").last.downcase.to_sym
     end
 
+    SUBCLASSES = []
+    def self.inherited(base)
+      SUBCLASSES << base
+    end
+
+    def self.subclasses
+      SUBCLASSES
+    end
+
     def self.valid_url_patterns
       []
     end
