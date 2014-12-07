@@ -1,5 +1,3 @@
-require_relative "spec_helper"
-
 describe FilmSnob do
   describe "not supported URLs" do
     it "should handle non-supported URLs gracefully" do
@@ -233,4 +231,3 @@ describe FilmSnob do
     end
   end
 end
-
