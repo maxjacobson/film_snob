@@ -5,6 +5,7 @@ require "film_snob/instagram"
 require "film_snob/vimeo"
 require "film_snob/youtube"
 require "film_snob/dailymotion"
+require "film_snob/vine"
 
 class FilmSnob
   class UrlToVideo
@@ -15,7 +16,8 @@ class FilmSnob
       FunnyOrDie,
       Coub,
       Dailymotion,
-      Instagram
+      Instagram,
+      Vine
     ]
 
     attr_reader :url, :options
