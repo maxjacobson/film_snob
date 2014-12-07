@@ -6,7 +6,8 @@ class FilmSnob
       [
         %r{https?://vimeo.com/(\d{1,})},
         %r{https?://vimeo.com/m/(\d{1,})},
-        %r{https?://vimeo.com/couchmode/\w+/[\w:]+/(\d{1,})}
+        %r{https?://vimeo.com/couchmode/\w+/[\w:]+/(\d{1,})},
+        %r{https?://vimeo.com/channels/\w+/(\d{1,})}
       ]
     end
 

@@ -84,6 +84,16 @@ describe FilmSnob do
       expect(snob.clean_url).to eq "https://vimeo.com/16010689"
     end
 
+    it "should parse staff picks vimeo URLs" do
+      snob = FilmSnob.new("http://vimeo.com/channels/staffpicks/58511112")
+      expect(snob.id).to eq "58511112"
+      expect(snob.site).to eq :vimeo
+      expect(snob.clean_url).to eq "https://vimeo.com/58511112"
+      VCR.use_cassette("vimeo/staff") do
+        expect(snob.title).to eq "DANGER ISLAND"
+      end
+    end
+
     it "should parse couchmode vimeo URLs" do
       url = "https://vimeo.com/couchmode/staffpicks/sort:date/91157088"
       snob = FilmSnob.new(url)
