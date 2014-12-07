@@ -1,5 +1,3 @@
-require_relative "spec_helper"
-
 class FilmSnob
   describe Deprecated do
 
