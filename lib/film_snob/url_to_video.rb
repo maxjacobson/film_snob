@@ -1,11 +1,6 @@
-require "film_snob/coub"
-require "film_snob/funny_or_die"
-require "film_snob/hulu"
-require "film_snob/instagram"
-require "film_snob/vimeo"
-require "film_snob/youtube"
-require "film_snob/dailymotion"
-require "film_snob/vine"
+Dir.entries(File.join(File.dirname(__FILE__), "video_sites")).each do |file|
+  require "film_snob/video_sites/#{file}" unless [".", ".."].include?(file)
+end
 
 class FilmSnob
   class UrlToVideo
