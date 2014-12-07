@@ -1,3 +1,5 @@
+require "film_snob/video_site"
+
 class FilmSnob
   class Hulu < VideoSite
     def self.valid_url_patterns
