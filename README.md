@@ -52,6 +52,7 @@ film_snob uses the oembed protocol to get html for embed codes. These options as
 * Instagram
 * Dailymotion
 * Vine
+* Rutube
 
 The same methods work with all of these providers.
 
