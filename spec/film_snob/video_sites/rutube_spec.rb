@@ -1,4 +1,4 @@
-describe "rutube URLs" do
+describe FilmSnob::Rutube do
   it "should parse rutube URLs" do
     url = "http://rutube.ru/video/586afc0f5c652439a2dca8b34d19a086/"
     film = FilmSnob.new(url)

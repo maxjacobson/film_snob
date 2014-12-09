@@ -1,4 +1,4 @@
-describe "funny or die URLs" do
+describe FilmSnob::FunnyOrDie do
   it "should parse funny or die URLs" do
     film = FilmSnob.new("http://www.funnyordie.com/videos/8db066d2e0/" \
                         "the-live-read-of-space-jam-with-blake-griffin")

@@ -1,4 +1,4 @@
-describe "vimeo URLs" do
+describe FilmSnob::Vimeo do
   it "should parse https vimeo URLs" do
     snob = FilmSnob.new("https://vimeo.com/16010689")
     expect(snob.id).to eq "16010689"

@@ -1,4 +1,4 @@
-describe "dailymotion URLs" do
+describe FilmSnob::Dailymotion do
   it "should parse https dailymotion URLs" do
     url = "https://www.dailymotion.com/video/xf02xp_uffie-difficult_music"
     snob = FilmSnob.new(url)

@@ -1,4 +1,4 @@
-describe "instagram URLs" do
+describe FilmSnob::Instagram do
   it "should parse normal instagram URLs" do
     film = FilmSnob.new("http://instagram.com/p/oBkLq7hnDP/")
     expect(film.id).to eq "oBkLq7hnDP"

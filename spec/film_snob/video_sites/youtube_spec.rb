@@ -1,4 +1,4 @@
-describe "YouTube URLs" do
+describe FilmSnob::YouTube do
   it "should parse normal YouTube URLs" do
     snob = FilmSnob.new("https://www.youtube.com/watch?v=7q5Ltr0qc8c")
     expect(snob).to be_embeddable

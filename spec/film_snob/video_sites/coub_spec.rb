@@ -1,4 +1,4 @@
-describe "coub URLs" do
+describe FilmSnob::Coub do
   it "should parse coub URLs" do
     film = FilmSnob.new("http://coub.com/view/rcd14cm")
     expect(film.id).to eq "rcd14cm"

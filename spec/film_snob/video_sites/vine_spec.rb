@@ -1,4 +1,4 @@
-describe "Vine" do
+describe FilmSnob::Vine do
   it "should parse URLs" do
     film = FilmSnob.new("https://vine.co/v/1")
     expect(film.id).to eq "1"

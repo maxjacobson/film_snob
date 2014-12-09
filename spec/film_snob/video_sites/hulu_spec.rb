@@ -1,4 +1,4 @@
-describe "hulu URLs" do
+describe FilmSnob::Hulu do
   it "should parse hulu URLs" do
     snob = FilmSnob.new("http://www.hulu.com/watch/285095")
     expect(snob.id).to eq "285095"
