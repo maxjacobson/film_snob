@@ -1,5 +1,5 @@
-Dir.entries(File.join(File.dirname(__FILE__), "video_sites")).each do |file|
-  require "film_snob/video_sites/#{file}" unless [".", ".."].include?(file)
+Dir[File.join(File.dirname(__FILE__), "video_sites", "*.rb")].each do |file|
+  require file
 end
 
 class FilmSnob
