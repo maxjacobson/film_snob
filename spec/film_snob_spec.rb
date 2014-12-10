@@ -55,6 +55,13 @@ describe FilmSnob do
       expect(snob.clean_url).to eq "https://www.youtube.com/watch?v=1Ee4bfu_t3c"
     end
 
+    it "should parse short YouTube URLs" do
+      snob = FilmSnob.new("https://www.youtube.com/v/sLSFOCyNC8Q")
+      expect(snob.id).to eq "sLSFOCyNC8Q"
+      expect(snob.site).to eq :youtube
+      expect(snob.clean_url).to eq "https://www.youtube.com/watch?v=sLSFOCyNC8Q"
+    end
+
     it "should raise a not embeddable error for a missing video URL" do
       VCR.use_cassette("youtube/missing video") do
         snob = FilmSnob.new("https://youtube.com/watch?v=malformedid")
