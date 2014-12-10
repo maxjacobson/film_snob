@@ -8,7 +8,8 @@ class FilmSnob
           https?://(?:(?:www|m).)?youtube.com/watch\?
           (?:feature=[\w\.]+&)?v=([\w\d\-_]+)
         }x,
-        %r{https?://(?:(?:www|m).)?youtu.be/([\w\d\-_]+)}
+        %r{https?://(?:(?:www|m).)?youtu.be/([\w\d\-_]+)},
+        %r{https?://(?:(?:www|m).)?youtube.com/v/([\w\d\-_]+)}
       ]
     end
 
