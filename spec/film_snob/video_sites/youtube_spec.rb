@@ -77,5 +77,13 @@ describe FilmSnob::YouTube do
       expect(film.title).to eq title
     end
   end
+
+  # I forget where I even saw this URL. I think in my RSS reader.
+  it "should parse direct embed URLs" do
+    snob = FilmSnob.new("https://www.youtube.com/v/sLSFOCyNC8Q")
+    expect(snob.id).to eq "sLSFOCyNC8Q"
+    expect(snob.site).to eq :youtube
+    expect(snob.clean_url).to eq "https://www.youtube.com/watch?v=sLSFOCyNC8Q"
+  end
 end
 
