@@ -1,5 +1,5 @@
-Dir.entries(File.join(File.dirname(__FILE__), "video_sites")).each do |file|
-  require "film_snob/video_sites/#{file}" unless [".", ".."].include?(file)
+Dir.entries(File.join(File.dirname(__FILE__), "oembed_providers")).each do |file|
+  require "film_snob/oembed_providers/#{file}" unless [".", ".."].include?(file)
 end
 
 class FilmSnob
@@ -18,7 +18,7 @@ class FilmSnob
     private
 
     def site
-      @site ||= VideoSite.subclasses.find do |site|
+      @site ||= OembedProvider.subclasses.find do |site|
         site.valid_url_patterns.any? do |pattern|
           pattern.match(url)
         end

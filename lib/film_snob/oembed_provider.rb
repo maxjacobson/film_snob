@@ -2,7 +2,7 @@ require "net/http"
 require "json"
 
 class FilmSnob
-  class VideoSite
+  class OembedProvider
     attr_reader :url, :options
     def initialize(url, options = {})
       @url = url

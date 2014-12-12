@@ -1,7 +1,7 @@
-require "film_snob/video_site"
+require "film_snob/oembed_provider"
 
 class FilmSnob
-  class FunnyOrDie < VideoSite
+  class FunnyOrDie < OembedProvider
     def self.valid_url_patterns
       [
         %r{http://www.funnyordie.com/videos/([\w\d]+)}
