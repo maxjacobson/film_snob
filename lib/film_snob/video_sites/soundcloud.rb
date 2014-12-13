@@ -2,6 +2,10 @@ require "film_snob/video_site"
 
 class FilmSnob
   class Soundcloud < VideoSite
+    def initialize(url, options = {})
+      super(url, options.merge(format: :json))
+    end
+
     def self.valid_url_patterns
       [
         %r{https?://soundcloud.com/([^/]+/[^?]+)},
@@ -15,10 +19,6 @@ class FilmSnob
 
     def clean_url
       @clean_url ||= "https://soundcloud.com/#{id}"
-    end
-
-    def options
-      { format: "json" }.merge(@options)
     end
   end
 end
