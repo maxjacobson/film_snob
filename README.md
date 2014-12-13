@@ -42,7 +42,7 @@ film.html  #=> "<iframe src=\"//player.vimeo.com/video/64683454\" width=\"720\" 
 
 film_snob uses the oembed protocol to get html for embed codes. These options assume some knowledge of the endpoint's API. The above vimeo example works because they [have an extensively documented API](http://developer.vimeo.com/apis/oembed) which allows tons of configuration. The other two don't seem to have any documentation or configuration at all.
 
-## Supported video providers
+## Supported Sites
 
 * YouTube
 * Vimeo
@@ -53,6 +53,7 @@ film_snob uses the oembed protocol to get html for embed codes. These options as
 * Dailymotion
 * Vine
 * Rutube
+* Soundcloud
 
 The same methods work with all of these providers.
 
