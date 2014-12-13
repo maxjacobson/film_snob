@@ -30,4 +30,28 @@ describe FilmSnob::Soundcloud do
     end
   end
 
+  context "with oembed configuration" do 
+
+    it "should allow user to set the iframe width" do 
+      snob = FilmSnob.new(
+        "https://soundcloud.com/david_rees/we-are-never-ever-getting-girl-boygether",
+        maxwidth: 500
+      )
+      VCR.use_cassette("soundcloud/maxwidth") do
+        expect(snob.html).to match(/width="500"/)
+      end
+    end
+
+    it "should allow user to set autoplay" do 
+      snob = FilmSnob.new(
+        "https://soundcloud.com/david_rees/we-are-never-ever-getting-girl-boygether",
+        auto_play: true
+      )
+      VCR.use_cassette("soundcloud/autoplay") do
+        expect(snob.html).to match(/auto_play=true/)
+      end
+    end
+
+  end
+
 end
