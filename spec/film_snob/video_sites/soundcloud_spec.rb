@@ -35,6 +35,12 @@ describe FilmSnob::Soundcloud do
     expect(snob).to_not be_embeddable
   end
 
+  it "should parse an ID from an extended URI" do 
+    snob = FilmSnob.new("https://soundcloud.com/coxncrendor/episode-86-youtube-rewind?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+soundcloud%2FnAMd+%28Cox+n%27+Crendor+in+the+Morning%29")
+    expect(snob).to be_embeddable
+    expect(snob.id).to eq "coxncrendor/episode-86-youtube-rewind"
+  end
+
   context "with oembed configuration" do 
 
     it "should allow user to set the iframe width" do 
