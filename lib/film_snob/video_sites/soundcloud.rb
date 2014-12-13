@@ -6,7 +6,8 @@ class FilmSnob
 
     def self.valid_url_patterns
       [ 
-        %r{https?://soundcloud.com/(.+)}
+        %r{https?://soundcloud.com/(.+)},
+        %r{https?://m.soundcloud.com/(.+)}
       ]
     end
 
