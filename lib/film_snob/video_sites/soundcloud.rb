@@ -5,7 +5,9 @@ class FilmSnob
   class Soundcloud < VideoSite
 
     def self.valid_url_patterns
-      [ %r{https://soundcloud.com/(.+)} ]
+      [ 
+        %r{https?://soundcloud.com/(.+)}
+      ]
     end
 
     def self.oembed_endpoint
