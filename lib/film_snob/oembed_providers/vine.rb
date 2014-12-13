@@ -1,7 +1,7 @@
-require "film_snob/video_site"
+require "film_snob/oembed_provider"
 
 class FilmSnob
-  class Vine < VideoSite
+  class Vine < OembedProvider
     def self.valid_url_patterns
       [
         %r{https://vine.co/v/(\w+)}
