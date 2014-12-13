@@ -30,6 +30,11 @@ describe FilmSnob::Soundcloud do
     end
   end
 
+  it "should not parse a page that does not contain an embedded song" do 
+    snob = FilmSnob.new("https://soundcloud.com/david_rees")
+    expect(snob).to_not be_embeddable
+  end
+
   context "with oembed configuration" do 
 
     it "should allow user to set the iframe width" do 
