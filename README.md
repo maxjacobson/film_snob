@@ -59,11 +59,15 @@ The same methods work with all of these providers.
 
 ## Testing
 
-Run `rake` to run all of the rspecs.
+Run `rake spec` to run all of the tests.
 
 ## Code Style
 
-Run `rubocop` and try to keep the cops happy.
+Run `rake style` to confirm the codebase is looking stylish.
+
+## Continous Integration
+
+Run `rake ci` to run both the tests and the style checks, which will be run on Travis; both should pass to have a green build.
 
 ## Questions?
 
