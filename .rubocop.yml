@@ -30,7 +30,6 @@ Style/RegexpLiteral:
                  Use %r for regular expressions matching more than
                  `MaxSlashes` "/" characters.
   StyleGuide: "https://github.com/bbatsov/ruby-style-guide#percent-r"
-  MaxSlashes: 0
   Enabled: true
 
 # I prefer raise to fail, so I'm disabling this one
