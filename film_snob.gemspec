@@ -26,6 +26,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "vcr",      "~> 2.9"
   spec.add_development_dependency "pry",      "~> 0.10"
   spec.add_development_dependency "rubocop",  "~> 0.32.1"
+  spec.add_development_dependency "todo_lint", "~> 0.2.0"
   spec.add_development_dependency "codeclimate-test-reporter", "~> 0.4"
   spec.required_ruby_version = ">= 1.9.3"
 end
