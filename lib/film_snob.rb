@@ -1,3 +1,4 @@
+require "forwardable"
 require "film_snob/version"
 require "film_snob/url_to_video"
 require "film_snob/exceptions"
