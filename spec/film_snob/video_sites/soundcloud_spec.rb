@@ -52,7 +52,7 @@ describe FilmSnob::Soundcloud do
     it "should allow user to set the iframe width" do
       snob = FilmSnob.new(
         "https://soundcloud.com/theweeknd/the-weeknd-king-of-the-fall",
-        maxwidth: 500
+        :maxwidth => 500
       )
       VCR.use_cassette("soundcloud/maxwidth") do
         expect(snob.html).to match(/width="500"/)
@@ -62,7 +62,7 @@ describe FilmSnob::Soundcloud do
     it "should allow user to set autoplay" do
       snob = FilmSnob.new(
         "https://soundcloud.com/theweeknd/the-weeknd-king-of-the-fall",
-        auto_play: true
+        :auto_play => true
       )
       VCR.use_cassette("soundcloud/autoplay") do
         expect(snob.html).to match(/auto_play=true/)
@@ -70,4 +70,3 @@ describe FilmSnob::Soundcloud do
     end
   end
 end
-

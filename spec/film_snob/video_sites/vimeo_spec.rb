@@ -46,15 +46,14 @@ describe FilmSnob::Vimeo do
   end
 
   it "should allow oembed configuration" do
-    snob = FilmSnob.new("http://vimeo.com/31158841", width: 400)
+    snob = FilmSnob.new("http://vimeo.com/31158841", :width => 400)
     VCR.use_cassette("vimeo/murmuration") do
       expect(snob.html).to match(/width="400"/)
     end
 
-    snob2 = FilmSnob.new("http://vimeo.com/31158841", width: 500)
+    snob2 = FilmSnob.new("http://vimeo.com/31158841", :width => 500)
     VCR.use_cassette("vimeo/murmuration2") do
       expect(snob2.html).to match(/width="500"/)
     end
   end
 end
-

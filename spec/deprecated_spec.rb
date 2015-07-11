@@ -3,7 +3,7 @@ class FilmSnob
     class Dog
       extend Deprecated
 
-      deprecated_alias :woof, :bark, removed_in: "v4.0.0"
+      deprecated_alias :woof, :bark, :removed_in => "v4.0.0"
 
       def bark
         "bark"
@@ -26,4 +26,3 @@ class FilmSnob
     end
   end
 end
-

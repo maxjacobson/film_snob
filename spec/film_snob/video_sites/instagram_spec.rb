@@ -34,4 +34,3 @@ describe FilmSnob::Instagram do
     end
   end
 end
-

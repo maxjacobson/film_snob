@@ -90,9 +90,8 @@ class FilmSnob
 
     def uri
       URI(self.class.oembed_endpoint).tap do |uri|
-        uri.query = URI.encode_www_form({ url: clean_url }.merge(options))
+        uri.query = URI.encode_www_form({ :url => clean_url }.merge(options))
       end
     end
   end
 end
-

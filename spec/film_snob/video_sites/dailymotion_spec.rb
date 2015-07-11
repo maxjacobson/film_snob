@@ -28,7 +28,7 @@ describe FilmSnob::Dailymotion do
   it "should allow oembed configuration" do
     snob = FilmSnob.new(
       "http://www.dailymotion.com/video/xf02xp_uffie-difficult_music",
-      maxwidth: 400
+      :maxwidth => 400
     )
     VCR.use_cassette("dailymotion/music1") do
       expect(snob.html).to match(/width="400"/)
@@ -36,11 +36,10 @@ describe FilmSnob::Dailymotion do
 
     snob2 = FilmSnob.new(
       "http://www.dailymotion.com/video/xf02xp_uffie-difficult_music",
-      maxwidth: 500
+      :maxwidth => 500
     )
     VCR.use_cassette("dailymotion/music500") do
       expect(snob2.html).to match(/width="500"/)
     end
   end
 end
-

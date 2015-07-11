@@ -9,4 +9,3 @@ describe FilmSnob::Coub do
     end
   end
 end
-
