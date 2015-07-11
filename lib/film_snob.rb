@@ -11,6 +11,7 @@ class FilmSnob
 
   def_delegators :video, *VIDEO_METHODS
 
+  # TODO(2015-08-01): actually deprecate this method
   deprecated_alias :watchable?, :embeddable?, removed_in: "v1.0.0"
 
   attr_reader :url
