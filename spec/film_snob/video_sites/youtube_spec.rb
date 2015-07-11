@@ -86,4 +86,3 @@ describe FilmSnob::YouTube do
     expect(snob.clean_url).to eq "https://www.youtube.com/watch?v=sLSFOCyNC8Q"
   end
 end
-

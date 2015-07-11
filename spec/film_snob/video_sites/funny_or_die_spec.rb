@@ -10,4 +10,3 @@ describe FilmSnob::FunnyOrDie do
     end
   end
 end
-

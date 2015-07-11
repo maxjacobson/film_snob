@@ -3,7 +3,7 @@ require "film_snob/video_site"
 class FilmSnob
   class Rutube < VideoSite
     def initialize(url, options = {})
-      super(url, options.merge(format: :json))
+      super(url, options.merge(:format => :json))
     end
 
     def self.valid_url_patterns
@@ -21,4 +21,3 @@ class FilmSnob
     end
   end
 end
-

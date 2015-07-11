@@ -13,6 +13,5 @@ task :todos do
   end
 end
 
-task ci: [:spec, :style, :todos]
-task default: :ci
-
+task :ci => [:spec, :style, :todos]
+task :default => :ci

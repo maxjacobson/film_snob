@@ -9,4 +9,3 @@ describe FilmSnob::Hulu do
     end
   end
 end
-

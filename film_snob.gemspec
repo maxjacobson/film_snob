@@ -30,4 +30,3 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "codeclimate-test-reporter", "~> 0.4"
   spec.required_ruby_version = ">= 1.9.3"
 end
-

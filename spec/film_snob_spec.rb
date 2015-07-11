@@ -12,4 +12,3 @@ describe FilmSnob do
     end
   end
 end
-

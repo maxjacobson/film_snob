@@ -9,4 +9,3 @@ describe FilmSnob::Vine do
     end
   end
 end
-
