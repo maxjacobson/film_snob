@@ -7,4 +7,3 @@ RuboCop::RakeTask.new(:style)
 
 task ci: [:spec, :style]
 task default: :ci
-

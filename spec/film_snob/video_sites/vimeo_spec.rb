@@ -57,4 +57,3 @@ describe FilmSnob::Vimeo do
     end
   end
 end
-

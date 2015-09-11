@@ -1,6 +1,5 @@
 class FilmSnob
   describe Deprecated do
-
     class Dog
       extend Deprecated
 
@@ -27,4 +26,3 @@ class FilmSnob
     end
   end
 end
-

@@ -1,61 +1,7 @@
-Style/CollectionMethods:
-  # Mapping from undesired method to desired_method
-  # e.g. to use `detect` over `find`:
-  #
-  # CollectionMethods:
-  #   PreferredMethods:
-  #     find: detect
-  PreferredMethods:
-    collect: 'map'
-    collect!: 'map!'
-    reduce: 'inject'
-    detect: 'find'
-    select: 'find_all'
+inherit_from: '.rubocop_todo.yml'
 
-# Disabling this because I don't love using the return keyword
-# and sometimes lines get long and difficult to read that way
-Style/GuardClause:
-  Description: "Check for conditionals that can be replaced with guard clauses"
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-nested-conditionals"
-  Enabled: false
-
-# I don't want to write documentation for every class
-Style/Documentation:
-  Description: "Document classes and non-namespace modules."
-  Enabled: false
-
-# I will use the %r syntax even if there's only one slash
-Style/RegexpLiteral:
-  Description: >-
-                 Use %r for regular expressions matching more than
-                 `MaxSlashes` "/" characters.
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#percent-r"
-  MaxSlashes: 0
-  Enabled: true
-
-# I prefer raise to fail, so I'm disabling this one
 Style/SignalException:
-  Description: "Checks for proper usage of fail and raise."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#fail-method"
-  Enabled: false
+  EnforcedStyle: 'only_raise'
 
-# I prefer double quotes
 Style/StringLiterals:
-  Description: "Checks if uses of quotes match the configured preference."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#consistent-string-literals"
-  Enabled: true
-  EnforcedStyle: double_quotes
-
-# Expect a final blank line
-Style/TrailingBlankLines:
-  Description: "Checks trailing blank lines and final newline."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#newline-eof"
-  Enabled: true
-  EnforcedStyle: final_blank_line
-
-# I like to use assignment in conditions
-Lint/AssignmentInCondition:
-  Description: "Don't use assignment in conditions."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#safe-assignment-in-condition"
-  Enabled: false
-
+  EnforcedStyle: 'double_quotes'

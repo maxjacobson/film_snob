@@ -12,4 +12,3 @@ describe FilmSnob::Rutube do
     end
   end
 end
-

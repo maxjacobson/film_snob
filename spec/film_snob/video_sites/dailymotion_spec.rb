@@ -43,4 +43,3 @@ describe FilmSnob::Dailymotion do
     end
   end
 end
-

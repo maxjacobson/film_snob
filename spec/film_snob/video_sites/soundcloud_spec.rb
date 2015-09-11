@@ -1,5 +1,4 @@
 describe FilmSnob::Soundcloud do
-
   it "should parse normal Soundcloud URLs" do
     snob = FilmSnob.new(
       "https://soundcloud.com/theweeknd/the-weeknd-king-of-the-fall"
@@ -50,7 +49,6 @@ describe FilmSnob::Soundcloud do
   end
 
   context "with oembed configuration" do
-
     it "should allow user to set the iframe width" do
       snob = FilmSnob.new(
         "https://soundcloud.com/theweeknd/the-weeknd-king-of-the-fall",
@@ -70,8 +68,5 @@ describe FilmSnob::Soundcloud do
         expect(snob.html).to match(/auto_play=true/)
       end
     end
-
   end
-
 end
-

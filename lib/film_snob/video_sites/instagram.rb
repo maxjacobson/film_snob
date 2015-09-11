@@ -34,4 +34,3 @@ class FilmSnob
     end
   end
 end
-
