@@ -10,7 +10,7 @@ class FilmSnob
     end
 
     def self.oembed_endpoint
-      "http://api.instagram.com/publicapi/oembed/"
+      "http://instagram.com/publicapi/oembed/"
     end
 
     def clean_url
