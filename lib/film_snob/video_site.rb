@@ -2,7 +2,7 @@ require "net/http"
 require "json"
 
 class FilmSnob
-  # TODO(2015-08-01): rename to something more general
+  # TODO(2015-11-15): rename to something more general
   # we're using this for things like Instagram
   class VideoSite
     attr_reader :url, :options
