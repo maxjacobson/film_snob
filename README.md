@@ -40,7 +40,13 @@ film.title #=> "Garann Means - Bacon is bad for you"
 film.html  #=> "<iframe src=\"//player.vimeo.com/video/64683454\" width=\"720\" height=\"405\" frameborder=\"0\" title=\"Garann Means - Bacon is bad for you\" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>"
 ```
 
-film_snob uses the oembed protocol to get html for embed codes. These options assume some knowledge of the endpoint's API. The above vimeo example works because they [have an extensively documented API](http://developer.vimeo.com/apis/oembed) which allows tons of configuration. The other two don't seem to have any documentation or configuration at all.
+film_snob uses the oembed protocol to get html for embed codes. These options
+assume some knowledge of the endpoint's API. The above vimeo example works
+because they [have an extensively documented API][vimeo] which allows tons of
+configuration. The other two don't seem to have any documentation or
+configuration at all.
+
+[vimeo]: http://developer.vimeo.com/apis/oembed
 
 ## Supported Sites
 
@@ -59,23 +65,27 @@ The same methods work with all of these providers.
 
 ## Testing
 
-Run `rake spec` to run all of the tests.
+Run `bundle exec rake spec` to run all of the tests.
 
-If you like TDD, you might want to run `guard` instead, which will listen for your changes and auto-run your tests when you save them or the related files.
+If you like TDD, you might want to run `bundle exec guard` instead, which will
+listen for your changes and auto-run your tests when you save them or the
+related files.
 
 ## Code Style
 
-Run `rake style` to confirm the codebase is looking stylish.
+Run `bundle exec rake style` to confirm the codebase is looking stylish.
 
 ## Continous Integration
 
-Run `rake ci` to run both the tests and the style checks, which will be run on Travis; both should pass to have a green build.
+Run `bundle exec rake ci` to run both the tests and the style checks, which
+will be run on Travis; both should pass to have a green build.
 
 ## Questions?
 
 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/maxjacobson/film_snob?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-Ping me in [the Gitter chat room](https://gitter.im/maxjacobson/film_snob) or [create a GitHub issue](https://github.com/maxjacobson/film_snob/issues/new)
+Ping me in [the Gitter chat room](https://gitter.im/maxjacobson/film_snob) or
+[create a GitHub issue](https://github.com/maxjacobson/film_snob/issues/new)
 
 ## Contributing
 
