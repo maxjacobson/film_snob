@@ -13,8 +13,6 @@ VCR.configure do |c|
 end
 
 RSpec.configure do |config|
-  config.default_formatter = "doc" if config.files_to_run.one?
-
   config.order = :random
 
   config.expect_with :rspec do |expectations|
@@ -26,4 +24,8 @@ RSpec.configure do |config|
   config.mock_with :rspec do |mocks|
     mocks.verify_partial_doubles = true
   end
+
+  # allow to focus on one thing at a time if you like, by adding the focus tag
+  config.filter_run_including :focus => true
+  config.run_all_when_everything_filtered = true
 end
