@@ -5,7 +5,8 @@
 [![Code Climate](https://codeclimate.com/github/maxjacobson/film_snob.png)](https://codeclimate.com/github/maxjacobson/film_snob)
 [![Test Coverage](https://codeclimate.com/github/maxjacobson/film_snob/badges/coverage.svg)](https://codeclimate.com/github/maxjacobson/film_snob)
 
-Helps parse URLs of web videos.
+Lookup things like titles and HTML embed codes for web media like videos,
+pictures, and songs.
 
 ## Installation
 
