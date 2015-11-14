@@ -61,6 +61,8 @@ The same methods work with all of these providers.
 
 Run `rake spec` to run all of the tests.
 
+If you like TDD, you might want to run `guard` instead, which will listen for your changes and auto-run your tests when you save them or the related files.
+
 ## Code Style
 
 Run `rake style` to confirm the codebase is looking stylish.

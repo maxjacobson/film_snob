@@ -10,5 +10,10 @@ gem "webmock", "~> 1.22"
 gem "vcr", "~> 2.9"
 gem "codeclimate-test-reporter", "~> 0.4"
 
+# TDD workflow
+gem "guard"
+gem "guard-rspec"
+gem "guard-rubocop"
+
 # Specify your gem's dependencies in film_snob.gemspec
 gemspec
