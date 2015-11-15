@@ -1,7 +1,7 @@
-require "film_snob/video_site"
+require "film_snob/oembed_provider"
 
 class FilmSnob
-  class Coub < VideoSite
+  class Coub < OembedProvider
     def self.valid_url_patterns
       [
         %r{https?://coub.com/view/(\w*)}

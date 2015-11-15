@@ -1,5 +1,5 @@
 # this is a generic parent class for sharing code
-describe FilmSnob::VideoSite do
+describe FilmSnob::OembedProvider do
   describe "initialization" do
     let(:film) { FilmSnob::YouTube.new(url, options) }
 

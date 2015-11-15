@@ -2,10 +2,9 @@ require "net/http"
 require "json"
 
 class FilmSnob
-  # TODO(2015-11-15): rename to something more general
-  # we're using this for things like Instagram
-  class VideoSite
+  class OembedProvider
     attr_reader :url, :options
+
     def initialize(url, options = {})
       @url = url
       @options = friendly_options(options)

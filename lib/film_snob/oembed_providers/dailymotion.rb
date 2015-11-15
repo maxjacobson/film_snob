@@ -1,7 +1,7 @@
-require "film_snob/video_site"
+require "film_snob/oembed_provider"
 
 class FilmSnob
-  class Dailymotion < VideoSite
+  class Dailymotion < OembedProvider
     def self.valid_url_patterns
       [
         %r{https?://www.dailymotion.com/video/([\w\d\-_]+)},

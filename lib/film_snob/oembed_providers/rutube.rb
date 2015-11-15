@@ -1,7 +1,7 @@
-require "film_snob/video_site"
+require "film_snob/oembed_provider"
 
 class FilmSnob
-  class Rutube < VideoSite
+  class Rutube < OembedProvider
     def initialize(url, options = {})
       super(url, options.merge(:format => :json))
     end
