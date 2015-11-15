@@ -1,6 +1,6 @@
 # This group allows to skip running RuboCop when RSpec failed.
 group :red_green_refactor, :halt_on_fail => true do
-  guard :rspec, :cmd => "rspec --fail-fast" do
+  guard :rspec, :cmd => "bundle exec rspec --fail-fast" do
     # run a spec when editing it
     watch(%r{^spec/.+_spec\.rb$})
 
