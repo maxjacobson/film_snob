@@ -4,7 +4,7 @@ Dir.entries(path_to_providers).each do |file|
 end
 
 class FilmSnob
-  class UrlToVideo
+  class UrlToOembedProvider
     attr_reader :url, :options
 
     def initialize(url, options)

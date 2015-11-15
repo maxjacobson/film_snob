@@ -1,6 +1,6 @@
 require "forwardable"
 require "film_snob/version"
-require "film_snob/url_to_video"
+require "film_snob/url_to_oembed_provider"
 require "film_snob/exceptions"
 
 class FilmSnob
@@ -14,7 +14,7 @@ class FilmSnob
 
   def initialize(url, options = {})
     @url = url
-    @video = UrlToVideo.new(url, options).video
+    @video = UrlToOembedProvider.new(url, options).video
   end
 
   def embeddable?
