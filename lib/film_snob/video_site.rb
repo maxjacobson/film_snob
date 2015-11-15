@@ -9,6 +9,7 @@ class FilmSnob
     def initialize(url, options = {})
       @url = url
       @options = options
+      ensure_match unless options.delete(:matched)
     end
 
     def id
@@ -69,7 +70,7 @@ class FilmSnob
     end
 
     def matching_pattern
-      self.class.valid_url_patterns.find do |pattern|
+      @matching_pattern ||= self.class.valid_url_patterns.find do |pattern|
         pattern.match(url)
       end
     end
@@ -92,6 +93,11 @@ class FilmSnob
       URI(self.class.oembed_endpoint).tap do |uri|
         uri.query = URI.encode_www_form({ :url => clean_url }.merge(options))
       end
+    end
+
+    def ensure_match
+      return unless matching_pattern.nil?
+      raise NotSupportedURLError, "#{self.class} can not handle #{url.inspect}"
     end
   end
 end

@@ -49,6 +49,21 @@ configuration at all.
 
 [vimeo]: http://developer.vimeo.com/apis/oembed
 
+### Performance
+
+The interface described above is nice for unknown URLs because you can use
+film_snob to check if a URL should be embeddable, and then if it should be, you
+can ask it for the HTML.
+
+If you know for sure that a URL ought to be a YouTube video, it will be faster
+to use an interface like this one:
+
+```ruby
+film = FilmSnob::YouTube.new("https://www.youtube.com/watch?v=st21dIMaGMs")
+film.title #=> "Key & Peele - Continental Breakfast"
+film.html #=> "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.com/embed/st21dIMaGMs?feature=oembed\" frameborder=\"0\" allowfullscreen></iframe>"
+```
+
 ## Supported Sites
 
 * YouTube
