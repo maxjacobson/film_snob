@@ -13,7 +13,7 @@ class FilmSnob
     end
 
     def media
-      site.nil? ? nil : site.new(url, options)
+      site.nil? ? nil : site.new(url, options.merge(:matched => true))
     end
 
     private
