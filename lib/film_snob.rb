@@ -2,17 +2,13 @@ require "forwardable"
 require "film_snob/version"
 require "film_snob/url_to_video"
 require "film_snob/exceptions"
-require "film_snob/deprecated"
 
 class FilmSnob
-  extend Deprecated, Forwardable
+  extend Forwardable
 
   VIDEO_METHODS = [:site, :id, :clean_url, :title, :html]
 
   def_delegators :video, *VIDEO_METHODS
-
-  # TODO(2015-11-15): actually remove this method
-  deprecated_alias :watchable?, :embeddable?, :removed_in => "v1.0.0"
 
   attr_reader :url
 
