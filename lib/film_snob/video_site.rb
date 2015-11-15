@@ -76,13 +76,17 @@ class FilmSnob
     end
 
     def oembed
-      @oembed ||= JSON.parse response.body
-    rescue
-      @oembed = {}
+      @oembed ||= begin
+                    if response.code.start_with?("2")
+                      JSON.parse(response.body)
+                    else
+                      {}
+                    end
+                  end
     end
 
     def response
-      self.class.http.request get
+      @response ||= self.class.http.request get
     end
 
     def get
