@@ -112,3 +112,13 @@ safe, welcoming space for collaboration, and contributors are expected to
 adhere to the [Contributor Covenant](http://contributor-covenant.org) code of
 conduct.
 
+## Releasing a new version
+
+* change the version in `version.rb`.
+* describe what changed in `CHANGELOG.md`
+* commit the change
+* run `bundle exec rake release` to create a git tag, push the code to github,
+  and push the release to rubygems
+* describe the release on [the releases page][]
+
+[the releases page]: https://github.com/maxjacobson/film_snob/releases
