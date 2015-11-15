@@ -107,7 +107,7 @@ Ping me in [the Gitter chat room](https://gitter.im/maxjacobson/film_snob) or
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at
-<https://github.com/maxjacobson/smashcut>. This project is intended to be a
+<https://github.com/maxjacobson/film_snob>. This project is intended to be a
 safe, welcoming space for collaboration, and contributors are expected to
 adhere to the [Contributor Covenant](http://contributor-covenant.org) code of
 conduct.

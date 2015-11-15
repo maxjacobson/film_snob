@@ -1,5 +1,11 @@
 # Change log
 
+## Unreleased
+
+### Fixes
+
+* Fixed a broken link in the README.md
+
 ## 1.0.1 (2015-11-14)
 
 ### New features
