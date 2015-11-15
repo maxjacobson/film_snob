@@ -12,7 +12,7 @@ class FilmSnob
       @options = options
     end
 
-    def video
+    def media
       site.nil? ? nil : site.new(url, options)
     end
 

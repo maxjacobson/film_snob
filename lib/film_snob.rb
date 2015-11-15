@@ -6,26 +6,26 @@ require "film_snob/exceptions"
 class FilmSnob
   extend Forwardable
 
-  VIDEO_METHODS = [:site, :id, :clean_url, :title, :html]
+  MEDIA_METHODS = [:site, :id, :clean_url, :title, :html]
 
-  def_delegators :video, *VIDEO_METHODS
+  def_delegators :media, *MEDIA_METHODS
 
   attr_reader :url
 
   def initialize(url, options = {})
     @url = url
-    @video = UrlToOembedProvider.new(url, options).video
+    @media = UrlToOembedProvider.new(url, options).media
   end
 
   def embeddable?
-    !@video.nil?
+    !@media.nil?
   end
 
   private
 
-  def video
+  def media
     if embeddable?
-      @video
+      @media
     else
       raise NotSupportedURLError, "#{url} is not a supported URL"
     end
