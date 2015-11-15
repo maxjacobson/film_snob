@@ -85,4 +85,22 @@ describe FilmSnob::YouTube do
     expect(snob.site).to eq :youtube
     expect(snob.clean_url).to eq "https://www.youtube.com/watch?v=sLSFOCyNC8Q"
   end
+
+  it "should allow specifying the width of the video" do
+    film = FilmSnob.new("https://www.youtube.com/watch?v=ky9Ro9pP2gc",
+                        :maxwidth => 350)
+    VCR.use_cassette "youtube/joanna1" do
+      expect(film.title).to include "Joanna"
+      expect(film.html).to include "350"
+    end
+  end
+
+  it "should allow specifying the width of the video via width option" do
+    film = FilmSnob.new("https://www.youtube.com/watch?v=ky9Ro9pP2gc",
+                        :width => 350)
+    VCR.use_cassette "youtube/joanna2" do
+      expect(film.title).to include "Joanna"
+      expect(film.html).to include "350"
+    end
+  end
 end

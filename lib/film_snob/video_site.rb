@@ -8,7 +8,7 @@ class FilmSnob
     attr_reader :url, :options
     def initialize(url, options = {})
       @url = url
-      @options = options
+      @options = friendly_options(options)
       ensure_match unless options.delete(:matched)
     end
 
@@ -98,6 +98,13 @@ class FilmSnob
     def ensure_match
       return unless matching_pattern.nil?
       raise NotSupportedURLError, "#{self.class} can not handle #{url.inspect}"
+    end
+
+    # a subclass can override this one to define some aliases to paper over some
+    # quirks in a specific oembed provider's API, e.g. mapping "width" to
+    # "maxwidth"
+    def friendly_options(options)
+      options
     end
   end
 end

@@ -20,5 +20,14 @@ class FilmSnob
     def clean_url
       @clean_url ||= "https://www.youtube.com/watch?v=#{id}"
     end
+
+    private
+
+    def friendly_options(options)
+      if (width = options.delete(:width) || options.delete("width"))
+        options[:maxwidth] = width
+      end
+      options
+    end
   end
 end
