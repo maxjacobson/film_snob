@@ -1,5 +1,5 @@
-require "net/http"
-require "json"
+
+require "film_snob/httpahty"
 
 class FilmSnob
   class OembedProvider
@@ -36,16 +36,6 @@ class FilmSnob
       ""
     end
 
-    def self.http
-      Net::HTTP.new(uri.host, uri.port).tap do |uri|
-        uri.use_ssl = use_ssl?
-      end
-    end
-
-    def self.use_ssl?
-      "https" == uri.scheme
-    end
-
     def title
       lookup :title
     end
@@ -60,10 +50,6 @@ class FilmSnob
       raise NotEmbeddableError, "#{clean_url} is not embeddable"
     end
 
-    def self.uri
-      URI.parse(oembed_endpoint)
-    end
-
     def lookup(attribute)
       oembed[attribute.to_s] || not_embeddable!
     end
@@ -75,27 +61,7 @@ class FilmSnob
     end
 
     def oembed
-      @oembed ||= begin
-                    if response.code.start_with?("2")
-                      JSON.parse(response.body)
-                    else
-                      {}
-                    end
-                  end
-    end
-
-    def response
-      @response ||= self.class.http.request get
-    end
-
-    def get
-      Net::HTTP::Get.new uri.request_uri
-    end
-
-    def uri
-      URI(self.class.oembed_endpoint).tap do |uri|
-        uri.query = URI.encode_www_form({ :url => clean_url }.merge(options))
-      end
+      @oembed ||= HTTPahty.new(self, options).to_h
     end
 
     def ensure_match

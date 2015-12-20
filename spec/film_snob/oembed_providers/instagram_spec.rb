@@ -26,6 +26,12 @@ describe FilmSnob::Instagram do
     expect(film.site).to eq :instagram
     expect(film.id).to eq "otxnbOocqJ"
   end
+  it "should handle URLs with dashes in them" do
+    film = FilmSnob.new("https://www.instagram.com/p/-2uLLaIcnS/")
+    expect(film).to be_embeddable
+    expect(film.site).to eq :instagram
+    expect(film.id).to eq "-2uLLaIcnS"
+  end
   it "should raise error when the URL is not embeddable" do
     film = FilmSnob.new("http://instagram.com/p/nothinghere/")
     VCR.use_cassette "instagram/nothing" do

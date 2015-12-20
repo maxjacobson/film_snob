@@ -4,13 +4,13 @@ class FilmSnob
   class Instagram < OembedProvider
     def self.valid_url_patterns
       [
-        %r{https?://(?:(?:www).)?instagram.com/p/(\w+)},
-        %r{https?://(?:(?:www).)?instagr.am/p/(\w+)}
+        %r{https?://(?:(?:www).)?instagram.com/p/([\w\-]+)},
+        %r{https?://(?:(?:www).)?instagr.am/p/([\w\-]+)}
       ]
     end
 
     def self.oembed_endpoint
-      "http://instagram.com/publicapi/oembed/"
+      "https://www.instagram.com/publicapi/oembed"
     end
 
     def clean_url
