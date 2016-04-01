@@ -76,7 +76,6 @@ film.html #=> "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.co
 * Vine
 * Rutube
 * Soundcloud
-* Rdio
 
 The same methods work with all of these providers.
 
