@@ -81,7 +81,7 @@ The same methods work with all of these providers.
 
 ## Testing
 
-Run `bundle exec rake spec` to run all of the tests.
+Run `bundle exec rspec` to run all of the tests.
 
 If you like TDD, you might want to run `bundle exec guard` instead, which will
 listen for your changes and auto-run your tests when you save them or the
@@ -89,11 +89,11 @@ related files.
 
 ## Code Style
 
-Run `bundle exec rake style` to confirm the codebase is looking stylish.
+Run `bundle exec rubocop` to confirm the codebase is looking stylish.
 
 ## Continous Integration
 
-Run `bundle exec rake ci` to run both the tests and the style checks, which
+Run `bundle exec rake` to run both the tests and the style checks, which
 will be run on Travis; both should pass to have a green build.
 
 ## Questions?
