@@ -1,6 +1,6 @@
 # film_snob
 
-[![Build Status](https://travis-ci.org/maxjacobson/film_snob.svg?branch=master)](https://travis-ci.org/maxjacobson/film_snob)
+[![Build Status](https://travis-ci.org/maxjacobson/film_snob.svg?branch=edge)](https://travis-ci.org/maxjacobson/film_snob)
 [![Gem Version](https://badge.fury.io/rb/film_snob.svg)](http://badge.fury.io/rb/film_snob)
 [![Code Climate](https://codeclimate.com/github/maxjacobson/film_snob.png)](https://codeclimate.com/github/maxjacobson/film_snob)
 [![Test Coverage](https://codeclimate.com/github/maxjacobson/film_snob/badges/coverage.svg)](https://codeclimate.com/github/maxjacobson/film_snob)
@@ -76,7 +76,6 @@ film.html #=> "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.co
 * Vine
 * Rutube
 * Soundcloud
-* Rdio
 
 The same methods work with all of these providers.
 

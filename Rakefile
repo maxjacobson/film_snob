@@ -1,14 +1,12 @@
 require "bundler/gem_tasks"
-require "rspec/core/rake_task"
-require "rubocop/rake_task"
-require "todo_lint"
+require "yaml"
 
-RSpec::Core::RakeTask.new(:spec)
-RuboCop::RakeTask.new(:style)
-
-task :todos do
-  TodoLint::Cli.new([]).run!
+task :continuous_integration do
+  YAML.load(File.read("./.travis.yml")).fetch("script").shuffle.each do |cmd|
+    next if system cmd
+    puts "\nFailed: #{cmd.inspect}"
+    exit 1
+  end
 end
 
-task :ci => [:spec, :style, :todos]
-task :default => :ci
+task :default => [:continuous_integration]

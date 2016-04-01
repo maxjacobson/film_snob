@@ -19,31 +19,38 @@ class FilmSnob
       @site ||= self.class.to_s.split("::").last.downcase.to_sym
     end
 
-    SUBCLASSES = []
-    def self.inherited(base)
-      SUBCLASSES << base
-    end
-
-    def self.subclasses
-      SUBCLASSES
-    end
-
-    def self.valid_url_patterns
-      []
-    end
-
-    def self.oembed_endpoint
-      ""
-    end
-
-    def self.http
-      Net::HTTP.new(uri.host, uri.port).tap do |uri|
-        uri.use_ssl = use_ssl?
+    class << self
+      def inherited(base)
+        subclasses << base
       end
-    end
 
-    def self.use_ssl?
-      "https" == uri.scheme
+      def valid_url_patterns
+        []
+      end
+
+      def oembed_endpoint
+        ""
+      end
+
+      def http
+        Net::HTTP.new(uri.host, uri.port).tap do |uri|
+          uri.use_ssl = use_ssl?
+        end
+      end
+
+      def use_ssl?
+        "https" == uri.scheme
+      end
+
+      def subclasses
+        @subclasses ||= []
+      end
+
+      private
+
+      def uri
+        URI.parse(oembed_endpoint)
+      end
     end
 
     def title
@@ -58,10 +65,6 @@ class FilmSnob
 
     def not_embeddable!
       raise NotEmbeddableError, "#{clean_url} is not embeddable"
-    end
-
-    def self.uri
-      URI.parse(oembed_endpoint)
     end
 
     def lookup(attribute)

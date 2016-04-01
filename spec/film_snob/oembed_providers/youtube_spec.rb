@@ -54,12 +54,12 @@ describe FilmSnob::YouTube do
   end
 
   it "can handle junked up URLs" do
-    VCR.use_cassette("youtube/pete") do
-      url = "http://www.youtube.com/watch?feature=youtube_gdata&v=fq-xGD_thXo"
-      title = "Pete Meets Olympic Freestyle Skier Torin Yater-Wallace"
+    VCR.use_cassette("youtube/oliver") do
+      url = "http://www.youtube.com/watch?feature=youtube_gdata&v=vU8dCYocuyI"
+      title = "Last Week Tonight with John Oliver: Border Wall (HBO)"
       film = FilmSnob.new(url)
       expect(film).to be_embeddable
-      expect(film.id).to eq "fq-xGD_thXo"
+      expect(film.id).to eq "vU8dCYocuyI"
       expect { film.html }.to_not raise_error
       expect(film.title).to eq title
     end
