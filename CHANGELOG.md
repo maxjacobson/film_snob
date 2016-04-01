@@ -2,9 +2,18 @@
 
 ## Unreleased
 
+
+### changes
+
+* remove support for rdio (which no longer exists)
+* uri method is now private
+
 ### Fixes
 
 * Fixed a broken link in the README.md
+* Fix instagram api (again)
+
+* * *
 
 ## 1.0.1 (2015-11-14)
 
