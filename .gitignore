@@ -8,7 +8,7 @@
 .yardoc
 /*.bundle
 /.ruby-version
-/Gemfile.lock
+/gems.locked
 /coverage
 /doc/
 /lib/bundler/man
