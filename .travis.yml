@@ -18,6 +18,7 @@ matrix:
     - rvm: jruby-9.0.1.0
     - rvm: rbx-2
 before_install: 'gem install bundler -v 1.10.6'
+install: bundle install
 script:
   - bundle exec rspec
   - bundle exec rubocop
