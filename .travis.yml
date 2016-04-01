@@ -28,4 +28,6 @@ matrix:
     - rvm: rbx-2
 before_install: 'gem install bundler -v 1.10.6'
 script:
-  - bundle exec rake ci
+  - bundle exec rspec
+  - bundle exec rubocop
+  - bundle exec todo_lint
