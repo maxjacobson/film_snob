@@ -5,7 +5,7 @@ describe FilmSnob::FunnyOrDie do
     expect(film.id).to eq "8db066d2e0"
     expect(film.site).to eq :funnyordie
     VCR.use_cassette "funnyordie/space jam" do
-      expect(film.title).to eq "The Live Read of Space Jam with Blake Griffin"
+      expect(film.title).to eq "The Live Read Of 'Space Jam' with Blake Griffin"
       expect { film.html }.not_to raise_error
     end
   end
