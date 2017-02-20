@@ -2,7 +2,8 @@ require "bundler/gem_tasks"
 require "yaml"
 
 task :continuous_integration do
-  YAML.load(File.read("./.travis.yml")).fetch("script").shuffle.each do |cmd|
+  path = File.read("./.travis.yml")
+  YAML.safe_load(path).fetch("script").shuffle.each do |cmd|
     next if system cmd
     puts "\nFailed: #{cmd.inspect}"
     exit 1
