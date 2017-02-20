@@ -24,10 +24,7 @@ class FilmSnob
   private
 
   def media
-    if embeddable?
-      @media
-    else
-      raise NotSupportedURLError, "#{url} is not a supported URL"
-    end
+    return @media if embeddable?
+    raise NotSupportedURLError, "#{url} is not a supported URL"
   end
 end
