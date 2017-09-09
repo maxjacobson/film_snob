@@ -73,7 +73,6 @@ film.html #=> "<iframe width=\"480\" height=\"270\" src=\"https://www.youtube.co
 * Coub
 * Instagram
 * Dailymotion
-* Vine
 * Rutube
 * Soundcloud
 
